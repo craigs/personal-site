@@ -3,10 +3,17 @@ const withCss = require('@zeit/next-css')
 
 const options = {
   cssModules: true,
-  publicRuntimeConfig: {
-    AMAZON_AFFILIATE: 'craigs01b-20',
+  env: {
     GRAPHCMS_API:
       'https://api-uswest.graphcms.com/v1/cjru2guibf57u01ggsxj5ff6i/master'
+  },
+  webpack: config => {
+    // Fixes npm packages that depend on `fs` module
+    config.node = {
+      fs: 'empty'
+    }
+
+    return config
   }
 }
 
