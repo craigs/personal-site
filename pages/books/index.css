@@ -1,0 +1,15 @@
+h1 {
+  margin-bottom: 0;
+
+  & + p {
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.books {
+  display: grid;
+  grid-auto-columns: 170px;
+  grid-auto-flow: column;
+  grid-gap: 50px;
+}

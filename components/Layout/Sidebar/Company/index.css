@@ -1,0 +1,17 @@
+.container {
+  margin-top: 6rem;
+}
+
+.company {
+  font-weight: 300;
+  font-size: 0.65rem;
+  margin-left: 4rem;
+  line-height: 1rem;
+  color: #999999;
+
+  & img {
+    height: 31px;
+    width: 38px;
+    margin-bottom: 10px;
+  }
+}

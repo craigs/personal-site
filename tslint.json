@@ -1,0 +1,20 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "no-console": false,
+    "no-implicit-dependencies": [true, "dev"],
+    "no-submodule-imports": [
+      true,
+      "classnames/bind",
+      "next/config",
+      "next/head",
+      "next/link",
+      "next/router",
+      "react-markdown/with-html"
+    ],
+    "curly": [true, "ignore-same-line"]
+  },
+  "rulesDirectory": []
+}

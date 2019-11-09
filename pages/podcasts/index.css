@@ -1,0 +1,15 @@
+h1 {
+  margin-bottom: 0;
+
+  & + p {
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.podcasts {
+  display: grid;
+  grid-auto-columns: 250px;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+}

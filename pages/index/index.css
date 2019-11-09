@@ -1,0 +1,33 @@
+.section {
+  margin-top: 4rem;
+
+  & h1 {
+    margin-bottom: 0;
+
+    & + p {
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.articles {
+  display: grid;
+  grid-auto-columns: 300px;
+  grid-auto-flow: column;
+  grid-gap: 50px;
+}
+
+.books {
+  display: grid;
+  grid-auto-columns: 170px;
+  grid-auto-flow: column;
+  grid-gap: 50px;
+}
+
+.podcasts {
+  display: grid;
+  grid-auto-columns: 250px;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+}

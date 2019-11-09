@@ -1,0 +1,25 @@
+.book {
+  & img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+  }
+
+  & h3 {
+    font-weight: 600;
+  }
+
+  & h4 {
+    margin-top: 0.75rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    opacity: 0.75;
+  }
+
+  & p {
+    line-height: 1rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+}

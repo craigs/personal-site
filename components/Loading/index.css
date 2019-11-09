@@ -1,0 +1,14 @@
+.loading {
+  align-items: center;
+  display: grid;
+  grid-gap: 1px 1px;
+  grid-template-areas: '.';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  text-align: center;
+
+  & > svg {
+    margin: 0 auto;
+  }
+}

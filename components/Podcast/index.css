@@ -1,0 +1,32 @@
+.podcast {
+  display: grid;
+  grid-template-columns: 90px auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. .';
+
+  & img {
+    border-radius: 5px;
+    width: 66px;
+    height: auto;
+  }
+
+  & h3 {
+    font-weight: 600;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  & h4 {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+
+  & p {
+    line-height: 1rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+}

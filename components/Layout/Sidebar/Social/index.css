@@ -1,0 +1,18 @@
+.social {
+  margin-top: 4rem;
+
+  & hr {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    width: 1.5rem;
+    height: 3px;
+  }
+
+  & a {
+    font-size: 0.8rem;
+    color: #999999;
+    font-weight: 400;
+    padding-left: 4rem;
+    margin-bottom: 0.5rem;
+  }
+}

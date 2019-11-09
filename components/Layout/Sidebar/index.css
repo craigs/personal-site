@@ -1,0 +1,16 @@
+.sidebar {
+  background: #18181e;
+  color: #999999;
+  padding-top: 5.2rem;
+
+  & a {
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+      color: #ffffff;
+    }
+  }
+}

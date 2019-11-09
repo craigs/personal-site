@@ -1,0 +1,45 @@
+@import 'breakpoints.css';
+
+html,
+body {
+  background: #18181e;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 17px;
+
+  @media (--mobile) {
+    font-size: 17px;
+  }
+}
+
+hr {
+  background-color: #d8d8d8;
+  border: none;
+  color: #d8d8d8;
+  height: 2px;
+  margin: 0;
+  width: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #023fb4;
+}

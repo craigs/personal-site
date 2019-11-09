@@ -1,0 +1,8 @@
+node_modules
+/coverage
+bundles
+.next
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
