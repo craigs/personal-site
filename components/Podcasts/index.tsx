@@ -1,3 +1,4 @@
+import React from 'react'
 import { Podcast } from '../Podcast'
 
 import Styles from './index.css'
