@@ -1,8 +1,7 @@
 import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
-import Link from 'next/link'
 import React from 'react'
-import { Books, Layout, Loading, Podcasts } from '../../components'
+import { Articles, Books, Layout, Loading, Podcasts } from '../../components'
 import { HomeQuery } from '../../graphql/HomeQuery'
 import { Api } from '../../lib/Api'
 
@@ -23,22 +22,11 @@ const Page = () => {
         <title>craigs.io - welcome</title>
       </Head>
 
-      <div className={Styles.articles}>
-        {articles.map(article => (
-          <div key={article.id}>
-            <Link href={`articles/${article.slug}`}>
-              <a>
-                <h1>{article.title}</h1>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <Articles collection={articles} />
 
       <div className={Styles.section}>
         <h1>Books</h1>
         <p>Recent books I have listened to and have gained insights from</p>
-
         <Books collection={books} />
       </div>
 
@@ -48,7 +36,6 @@ const Page = () => {
           The right selection of Podcasts is just the food a creative mind
           craves
         </p>
-
         <Podcasts collection={podcasts} />
       </div>
     </Layout>
