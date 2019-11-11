@@ -12,8 +12,11 @@ h1 {
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
-  margin-bottom: 2rem;
   max-width: 300px;
+
+  & + p {
+    margin-top: 0;
+  }
 }
 
 h2 {

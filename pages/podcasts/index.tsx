@@ -1,11 +1,9 @@
 import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
-import { Layout, Loading, Podcast } from '../../components'
+import { Layout, Loading, Podcasts } from '../../components'
 import { PodcastsQuery } from '../../graphql/PodcastsQuery'
 import { Api } from '../../lib/Api'
-
-import Styles from './index.css'
 
 const Page = () => {
   const options = { client: Api }
@@ -25,11 +23,7 @@ const Page = () => {
       <h1>Podcasts</h1>
       <p>Podcasts I subscribe to</p>
 
-      <div className={Styles.podcasts}>
-        {podcasts.map(podcast => (
-          <Podcast key={podcast.id} {...podcast} />
-        ))}
-      </div>
+      <Podcasts collection={podcasts} />
     </Layout>
   )
 }

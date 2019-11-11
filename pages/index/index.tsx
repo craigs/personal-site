@@ -2,7 +2,7 @@ import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
-import { Book, Layout, Loading, Podcast } from '../../components'
+import { Books, Layout, Loading, Podcasts } from '../../components'
 import { HomeQuery } from '../../graphql/HomeQuery'
 import { Api } from '../../lib/Api'
 
@@ -39,11 +39,7 @@ const Page = () => {
         <h1>Books</h1>
         <p>Recent books I have listened to and have gained insights from</p>
 
-        <div className={Styles.books}>
-          {books.map(book => (
-            <Book key={book.id} {...book} />
-          ))}
-        </div>
+        <Books collection={books} />
       </div>
 
       <div className={Styles.section}>
@@ -53,11 +49,7 @@ const Page = () => {
           craves
         </p>
 
-        <div className={Styles.podcasts}>
-          {podcasts.map(podcast => (
-            <Podcast key={podcast.id} {...podcast} />
-          ))}
-        </div>
+        <Podcasts collection={podcasts} />
       </div>
     </Layout>
   )
