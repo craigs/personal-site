@@ -1,12 +1,9 @@
 import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
-import Link from 'next/link'
 import React from 'react'
-import { Layout, Loading } from '../../components'
+import { Articles, Layout, Loading } from '../../components'
 import { ArticlesQuery } from '../../graphql/ArticlesQuery'
 import { Api } from '../../lib/Api'
-
-import Styles from './index.css'
 
 const Page = () => {
   const category = 'article'
@@ -24,17 +21,7 @@ const Page = () => {
         <title>Articles</title>
       </Head>
 
-      <div className={Styles.container}>
-        {articles.map(article => (
-          <div key={article.id}>
-            <Link href={`articles/${article.slug}`}>
-              <a>
-                <h1>{article.title}</h1>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
+      <Articles collection={articles} />
     </Layout>
   )
 }
