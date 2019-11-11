@@ -17,17 +17,3 @@
   grid-auto-flow: column;
   grid-gap: 50px;
 }
-
-.books {
-  display: grid;
-  grid-auto-columns: 170px;
-  grid-auto-flow: column;
-  grid-gap: 50px;
-}
-
-.podcasts {
-  display: grid;
-  grid-auto-columns: 250px;
-  grid-auto-flow: column;
-  grid-gap: 30px;
-}

@@ -1,11 +1,9 @@
 import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
-import { Book, Layout, Loading } from '../../components'
+import { Books, Layout, Loading } from '../../components'
 import { BooksQuery } from '../../graphql/BooksQuery'
 import { Api } from '../../lib/Api'
-
-import Styles from './index.css'
 
 const Page = () => {
   const options = { client: Api }
@@ -25,11 +23,7 @@ const Page = () => {
       <h1>Books</h1>
       <p>Recent books I have listened to and have gained insights from</p>
 
-      <div className={Styles.books}>
-        {books.map(book => (
-          <Book key={book.id} {...book} />
-        ))}
-      </div>
+      <Books collection={books} />
     </Layout>
   )
 }

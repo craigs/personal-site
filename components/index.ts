@@ -1,6 +1,8 @@
 export { Article } from './Article'
 export { Book } from './Book'
+export { Books } from './Books'
 export { Layout } from './Layout'
 export { Loading } from './Loading'
 export { Podcast } from './Podcast'
+export { Podcasts } from './Podcasts'
 export { SelectArticle } from './SelectArticle'
