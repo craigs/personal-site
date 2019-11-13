@@ -1,6 +1,7 @@
 export { Article } from './Article'
 export { Book } from './Book'
 export { Books } from './Books'
+export { ButtonLink } from './ButtonLink'
 export { Layout } from './Layout'
 export { Loading } from './Loading'
 export { Podcast } from './Podcast'
