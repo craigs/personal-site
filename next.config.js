@@ -12,6 +12,13 @@ const options = {
     config.node = {
       fs: 'empty'
     }
+    // config.module = {
+    //   rules: [
+    //     {
+    //       exclude: ['/pages/**/__tests__/*']
+    //     }
+    //   ]
+    // }
 
     return config
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import { Books } from '../../../components'
-import Page from '../index'
-import books from './data/books'
+import { SelectArticle } from '../../../components'
+import Page from '../../../pages/work'
+import work from './data/work'
 
 const useRouter = {
   asPath: {
@@ -10,12 +10,12 @@ const useRouter = {
   }
 }
 
-jest.mock('@apollo/react-hooks', () => ({ useQuery: () => books }))
+jest.mock('@apollo/react-hooks', () => ({ useQuery: () => work }))
 jest.mock('next/router', () => ({ useRouter: () => useRouter }))
 
 it('renders an article', async () => {
   const renderer = TestRenderer.create(<Page />)
   const { root } = renderer
 
-  expect(root.findByType(Books)).not.toBeNull()
+  expect(root.findByType(SelectArticle)).not.toBeNull()
 })

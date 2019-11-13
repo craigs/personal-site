@@ -1,7 +1,7 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import { Articles } from '../../../components'
-import Page from '../index'
+import Page from '../../../pages/articles'
 import articles from './data/articles'
 
 const useRouter = {

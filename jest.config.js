@@ -1,9 +1,10 @@
 module.exports = {
   preset: 'ts-jest',
   testMatch: [
-    '<rootDir>/components/**/__tests__/*.{ts,tsx}',
-    '<rootDir>/lib/**/__tests__/*.{ts,tsx}',
-    '<rootDir>/pages/**/__tests__/*.{ts,tsx}'
+    '<rootDir>/__tests__/**/*.test.{ts,tsx}',
+    '<rootDir>/components/**/__tests__/*.test.{ts,tsx}',
+    '<rootDir>/lib/**/__tests__/*.test.{ts,tsx}',
+    '<rootDir>/pages/**/__tests__/*.test.{ts,tsx}'
   ],
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy'
