@@ -4,6 +4,7 @@ export const PodcastsQuery = gql`
   query getPodcasts {
     podcasts(orderBy: title_ASC) {
       author
+      id
       image {
         url
       }

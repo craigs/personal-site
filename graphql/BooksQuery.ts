@@ -4,11 +4,12 @@ export const BooksQuery = gql`
   query getBooks {
     books(orderBy: title_ASC) {
       author
-      subtitle
+      id
       image {
         url
       }
       link
+      subtitle
       title
     }
   }
