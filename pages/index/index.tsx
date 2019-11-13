@@ -1,7 +1,14 @@
 import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
-import { Articles, Books, Layout, Loading, Podcasts } from '../../components'
+import {
+  Articles,
+  Books,
+  ButtonLink,
+  Layout,
+  Loading,
+  Podcasts
+} from '../../components'
 import { HomeQuery } from '../../graphql/HomeQuery'
 import { Api } from '../../lib/Api'
 
