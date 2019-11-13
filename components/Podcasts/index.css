@@ -1,6 +1,5 @@
 .podcasts {
   display: grid;
-  grid-auto-columns: 250px;
-  grid-auto-flow: column;
   grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, 250px);
 }
