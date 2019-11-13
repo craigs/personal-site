@@ -3,7 +3,6 @@
   grid-template-areas: '. .';
   grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr;
-  max-width: 900px;
   min-height: 100vh;
 }
 

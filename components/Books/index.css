@@ -1,6 +1,5 @@
 .books {
   display: grid;
-  grid-auto-columns: 170px;
-  grid-auto-flow: column;
   grid-gap: 50px;
+  grid-template-columns: repeat(auto-fill, 170px);
 }

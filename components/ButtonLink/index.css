@@ -1,0 +1,12 @@
+.button {
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.25rem;
+
+  & img {
+    margin-left: 0.75rem;
+  }
+}
