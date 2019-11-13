@@ -2,8 +2,6 @@ import React from 'react'
 
 export default () => (
   <>
-    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -79,6 +77,6 @@ export default () => (
       name="msapplication-TileImage"
       content="/favicon/ms-icon-144x144.png"
     />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff"></meta>
   </>
 )
