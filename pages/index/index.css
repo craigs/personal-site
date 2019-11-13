@@ -11,10 +11,3 @@
     }
   }
 }
-
-.articles {
-  display: grid;
-  grid-auto-columns: 300px;
-  grid-auto-flow: column;
-  grid-gap: 50px;
-}
