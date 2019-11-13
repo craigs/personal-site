@@ -4,7 +4,12 @@ import { Article } from '../../index'
 import { SelectArticle } from '../index'
 
 import article from './data/article'
-import useRouter from './data/useRouter'
+
+const useRouter = {
+  asPath: {
+    startsWith: () => false
+  }
+}
 
 jest.mock('@apollo/react-hooks', () => ({ useQuery: () => article }))
 jest.mock('next/router', () => ({ useRouter: () => useRouter }))
