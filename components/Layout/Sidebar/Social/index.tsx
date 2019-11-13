@@ -6,8 +6,8 @@ export default () => (
   <div className={Styles.social}>
     <hr />
 
-    <a href="https://twitter.com">Twitter</a>
-    <a href="https://linkedin.com">LinkedIn</a>
-    <a href="https://github.com">Github</a>
+    <a href="https://twitter.com/craigs_io">Twitter</a>
+    <a href="https://www.linkedin.com/in/craigs0/">LinkedIn</a>
+    <a href="https://github.com/craigs/personal-site">GitHub</a>
   </div>
 )
