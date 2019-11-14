@@ -1,8 +1,7 @@
 .articles {
   display: grid;
-  grid-auto-columns: 300px;
-  grid-auto-flow: column;
   grid-gap: 50px;
+  grid-template-columns: repeat(auto-fill, 300px);
 
   @media only screen and (max-width: 600px) {
     display: block;
