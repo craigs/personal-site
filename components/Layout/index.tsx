@@ -15,6 +15,17 @@ export const Layout = ({ children }) => (
       <Favicon />
     </Head>
 
+    <div className={Styles.toggle}>
+      <label htmlFor="toggler">X</label>
+    </div>
+
+    <input
+      name="toggler"
+      id="toggler"
+      className={Styles.toggler}
+      type="checkbox"
+    />
+
     <div className={Styles.container}>
       <Sidebar />
 

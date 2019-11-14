@@ -1,9 +1,39 @@
+.toggle {
+  display: none;
+
+  @media only screen and (max-width: 600px) {
+    display: inline-block;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 1rem;
+    transform: translateX(2rem);
+  }
+}
+
+.toggler {
+  display: none;
+}
+
+.toggler:checked + .container {
+  @media only screen and (max-width: 600px) {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
 .container {
   display: grid;
   grid-template-areas: '. .';
   grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr;
   min-height: 100vh;
+  position: relative;
+  transition: 0.1s;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    transform: translate3D(-200px, 0, 0);
+  }
 }
 
 .content {
