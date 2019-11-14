@@ -6,7 +6,7 @@ import Sidebar from './Sidebar'
 import '../../styles/index.css'
 import Styles from './index.css'
 
-export const Layout = ({ children }) => (
+export const Layout = ({children}) => (
   <>
     <Head>
       <title>craigs.io | Welcome</title>
@@ -16,7 +16,9 @@ export const Layout = ({ children }) => (
     </Head>
 
     <div className={Styles.toggle}>
-      <label htmlFor="toggler">X</label>
+      <label htmlFor="toggler">
+        <img src="/hamburger.svg" />
+      </label>
     </div>
 
     <input

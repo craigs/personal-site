@@ -13,6 +13,7 @@ export const HomeQuery = gql`
     }
 
     books(where: { featured: true }, orderBy: createdAt_DESC, first: 10) {
+      id
       image {
         url
       }
@@ -23,6 +24,7 @@ export const HomeQuery = gql`
     }
 
     podcasts(where: { featured: true }, orderBy: createdAt_DESC, first: 10) {
+      id
       image {
         url
       }
