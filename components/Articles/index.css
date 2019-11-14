@@ -3,4 +3,13 @@
   grid-auto-columns: 300px;
   grid-auto-flow: column;
   grid-gap: 50px;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+
+    & a {
+      display: block;
+      margin-bottom: 3rem;
+    }
+  }
 }
