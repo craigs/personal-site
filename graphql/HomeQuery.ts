@@ -8,29 +8,29 @@ export const HomeQuery = gql`
       orderBy: createdAt_DESC
     ) {
       id
-      title
       slug
+      title
     }
 
     books(where: { featured: true }, orderBy: createdAt_DESC, first: 10) {
+      author
       id
       image {
         url
       }
-      title
-      subtitle
-      author
       link
+      subtitle
+      title
     }
 
     podcasts(where: { featured: true }, orderBy: createdAt_DESC, first: 10) {
+      author
       id
       image {
         url
       }
-      title
-      author
       link
+      title
     }
   }
 `
