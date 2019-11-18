@@ -1,9 +1,11 @@
+@import '../../styles/breakpoints.css';
+
 .articles {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 300px);
 
-  @media only screen and (max-width: 600px) {
+  @media (--mobile) {
     display: block;
 
     & a {
