@@ -7,9 +7,11 @@ import Styles from './index.css'
 
 export default () => (
   <div className={Styles.sidebar}>
-    <a href="/" className={Styles.home}>
-      <img src="/logos/craigs.svg" />
-    </a>
+    <div className={Styles.home}>
+      <a href="/">
+        <img src="/logos/craigs.svg" />
+      </a>
+    </div>
 
     <Links />
     <Social />
