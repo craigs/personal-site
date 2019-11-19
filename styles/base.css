@@ -34,9 +34,11 @@ hr {
   background-color: #d8d8d8;
   border: none;
   color: #d8d8d8;
-  height: 2px;
+  height: 3px;
   margin: 0;
-  width: 100px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  width: 4rem;
 }
 
 a {
