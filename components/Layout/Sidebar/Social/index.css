@@ -2,7 +2,10 @@
   margin-top: 4rem;
 
   & hr {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
     width: 1.5rem;
+    height: 3px;
   }
 
   & a {
