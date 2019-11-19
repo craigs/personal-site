@@ -20,8 +20,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 1.3rem;
+  margin-bottom: 3rem;
 }
 
 h3 {
