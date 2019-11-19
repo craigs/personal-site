@@ -10,9 +10,9 @@ export default [
     name: 'Work'
   },
   {
-    as: '/experience',
-    href: '/article?slug=experience',
-    name: 'Experience'
+    as: '/bio',
+    href: '/article?slug=bio',
+    name: 'Bio'
   },
   {
     as: '/books',
