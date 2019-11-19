@@ -3,13 +3,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 200;
+  font-weight: 700;
   color: #ffffff;
   margin-bottom: 0;
 }
 
 h1 {
-  font-weight: 700;
   font-size: 30px;
   line-height: 35px;
   max-width: 300px;
@@ -21,7 +20,6 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-weight: 700;
   line-height: 1.3rem;
   margin-bottom: 3rem;
 }
