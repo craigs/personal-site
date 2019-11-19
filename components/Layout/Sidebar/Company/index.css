@@ -4,14 +4,14 @@
 
 .company {
   font-weight: 300;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   margin-left: 4rem;
   line-height: 1rem;
   color: #999999;
 
   & img {
-    height: 31px;
-    width: 38px;
+    height: 40px;
+    width: auto;
     margin-bottom: 10px;
   }
 }
