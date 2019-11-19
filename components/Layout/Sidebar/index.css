@@ -1,6 +1,15 @@
+.home {
+  padding: 4rem;
+  padding-bottom: 1.5rem;
+
+  & img {
+    width: 70px;
+    height: auto;
+  }
+}
+
 .sidebar {
   color: #999999;
-  padding-top: 5.2rem;
 
   & a {
     display: block;
