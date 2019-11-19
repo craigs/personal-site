@@ -3,6 +3,13 @@
 html,
 body {
   background: #18181e;
+  background: rgb(24, 24, 30);
+  background: linear-gradient(
+    to bottom right,
+    rgba(24, 24, 30, 1) 0%,
+    rgba(1, 1, 1, 1) 100%
+  );
+
   margin: 0;
   padding: 0;
   width: 100%;
