@@ -2,6 +2,7 @@
   min-height: 100vh;
   max-width: 600px;
 
+  & li,
   & p {
     font-size: 1.2rem;
     line-height: 2rem;
