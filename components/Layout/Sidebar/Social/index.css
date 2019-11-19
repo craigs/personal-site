@@ -1,5 +1,6 @@
 .social {
   margin-top: 4rem;
+  line-height: 1.5rem;
 
   & hr {
     margin-bottom: 2rem;
@@ -14,5 +15,11 @@
     font-weight: 400;
     padding-left: 4rem;
     margin-bottom: 0.5rem;
+  }
+
+  & img {
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
   }
 }

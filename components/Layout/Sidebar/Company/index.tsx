@@ -5,7 +5,7 @@ import Styles from './index.css'
 export default () => (
   <div className={Styles.container}>
     <a href="https://cogent.co" className={Styles.company}>
-      <img src="/cogent-logo.svg" />
+      <img src="/logos/cogent-symbol.svg" />
       <br />
       I ♥️ working at <br />
       Cogent, Melbourne
