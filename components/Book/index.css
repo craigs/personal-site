@@ -1,3 +1,16 @@
+@import '../../styles/breakpoints.css';
+
+.link {
+  @media (--mobile) {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: '. .';
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 2rem;
+  }
+}
+
 .book {
   & img {
     border-radius: 5px;
