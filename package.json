@@ -42,7 +42,8 @@
     "node-fetch": "^2.6.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-markdown": "^4.2.2"
+    "react-markdown": "^4.2.2",
+    "react-swipeable": "^5.4.0"
   },
   "devDependencies": {
     "@apollo/react-testing": "^3.1.3",
