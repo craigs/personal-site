@@ -1,0 +1,10 @@
+{
+  "env": {
+    "GRAPHCMS_API": "@craigs_graphcms_api"
+  },
+  "build": {
+    "env": {
+      "GRAPHCMS_API": "@craigs_graphcms_api"
+    }
+  }
+}
