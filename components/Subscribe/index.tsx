@@ -28,7 +28,7 @@ export const Subscribe = () => {
   }
 
   return (
-    <>
+    <div className={Styles.subscribe}>
       {subscribed && (
         <>
           <h1>You have been subscribed</h1>
@@ -63,6 +63,6 @@ export const Subscribe = () => {
           {data.msg && <p>{data.msg}</p>}
         </>
       )}
-    </>
+    </div>
   )
 }
