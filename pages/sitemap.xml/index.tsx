@@ -1,4 +1,3 @@
-import React from 'react'
 import {IncomingMessage} from 'http'
 
 // tslint:disable-next-line: no-empty
