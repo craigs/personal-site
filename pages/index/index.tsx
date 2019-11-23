@@ -7,7 +7,8 @@ import {
   ButtonLink,
   Layout,
   Loading,
-  Podcasts
+  Podcasts,
+  Subscribe
 } from '../../components'
 import {HomeQuery} from '../../graphql/HomeQuery'
 import {Api} from '../../lib/Api'
@@ -48,6 +49,10 @@ const Page = () => {
         </p>
         <Podcasts collection={podcasts} />
         <ButtonLink label="more podcasts" link="/podcasts" />
+      </div>
+
+      <div className={Styles.section}>
+        <Subscribe />
       </div>
     </Layout>
   )

@@ -1,0 +1,35 @@
+input {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+
+  &:focus {
+    border: 2px solid white;
+    outline: none;
+  }
+}
+
+button {
+  background: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: #18181e;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.25rem;
+  transition: 0.25s ease;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+
+  &:focus {
+    border: 2px solid white;
+    outline: none;
+  }
+
+  & img {
+    margin-left: 0.75rem;
+  }
+}
