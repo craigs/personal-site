@@ -24,6 +24,9 @@ export const Layout = ({children}) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="robots" content="index, follow" />
+        <meta name="application-name" content="craigs.io" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta property="og:site_name" content="craigs.io" />
         <Favicon />
       </Head>
 

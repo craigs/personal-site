@@ -25,9 +25,7 @@ const generateSitemap = (req: IncomingMessage) => {
   return sitemap
 }
 
-Page.getInitialProps = context => {
-  const {req, res} = context
-  console.log(req.headers.originalUrl)
+Page.getInitialProps = ({req, res}) => {
   res.setHeader('Content-Type', 'text/xml')
   res.write(generateSitemap(req))
   res.end()
