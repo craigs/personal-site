@@ -10,12 +10,10 @@ interface ISubscribeError {
 }
 
 const subscribe = (email: string) => {
+  const options = { EmailAddress: email }
+
   return new Promise<ISubscribeError>(resolve => {
-    api.subscribers.addSubscriber(
-      CM_LISTID,
-      { EmailAddress: email },
-      (err: ISubscribeError) => resolve(err)
-    )
+    api.subscribers.addSubscriber(CM_LISTID, options, err => resolve(err))
   })
 }
 
