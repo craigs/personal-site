@@ -1,10 +1,14 @@
 {
   "env": {
-    "GRAPHCMS_API": "@craigs_graphcms_api"
+    "GRAPHCMS_API": "@craigs_graphcms_api",
+    "CM_API": "@craigs_cm_api",
+    "CM_LISTID": "@craigs_cm_listid"
   },
   "build": {
     "env": {
-      "GRAPHCMS_API": "@craigs_graphcms_api"
+      "GRAPHCMS_API": "@craigs_graphcms_api",
+      "CM_API": "@craigs_cm_api",
+      "CM_LISTID": "@craigs_cm_listid"
     }
   }
 }
