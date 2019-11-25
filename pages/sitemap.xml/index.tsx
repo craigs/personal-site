@@ -17,7 +17,6 @@ const generateSitemap = (req: IncomingMessage) => {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>${protocol}://${host}/podcasts</loc>
-      <lastmod>2019-11-24</lastmod>
     </url>
   </urlset>`
 
