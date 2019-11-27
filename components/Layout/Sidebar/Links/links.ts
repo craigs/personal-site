@@ -1,27 +1,27 @@
 export default [
   {
     as: '/articles',
-    href: '/article?slug=posts',
+    href: '/articles',
     name: 'Articles'
   },
   {
     as: '/work',
-    href: '/article?slug=work',
+    href: '/work',
     name: 'Work'
   },
   {
     as: '/bio',
-    href: '/article?slug=bio',
+    href: '/bio',
     name: 'Bio'
   },
   {
     as: '/books',
-    href: '/article?slug=books',
+    href: '/books',
     name: 'Books'
   },
   {
     as: '/podcasts',
-    href: '/article?slug=podcasts',
+    href: '/podcasts',
     name: 'Podcasts'
   }
 ]

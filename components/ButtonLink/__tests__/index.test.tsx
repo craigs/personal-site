@@ -4,7 +4,7 @@ import { ButtonLink } from '../../index'
 
 it('renders a button link', () => {
   const renderer = TestRenderer.create(
-    <ButtonLink label="podcasts" link="/podcasts" />
+    <ButtonLink as="/podcasts" label="podcasts" link="/podcasts" />
   )
   const { root } = renderer
 
