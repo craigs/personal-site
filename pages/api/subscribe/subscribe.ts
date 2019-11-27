@@ -1,4 +1,4 @@
-import fetch, { Headers } from 'node-fetch'
+import fetch from 'isomorphic-fetch'
 import ICampaignMonitorError from './ICampaignMonitorError'
 
 const BASE_URL = 'https://api.createsend.com/api/v3.1'
@@ -12,9 +12,9 @@ export default async (email: string): Promise<ICampaignMonitorError> => {
 
   const response = await fetch(url, {
     body: JSON.stringify(options),
-    headers: new Headers({
+    headers: {
       Authorization: auth
-    }),
+    },
     method: 'POST'
   })
 
