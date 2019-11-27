@@ -5,27 +5,22 @@ import { Layout, Loading, Podcasts } from '../../components'
 import { PodcastsQuery } from '../../graphql/PodcastsQuery'
 import { Api } from '../../lib/Api'
 
-const Page = () => {
-  const options = { client: Api }
-  const { loading, error, data } = useQuery(PodcastsQuery, options)
+const Page = ({ podcasts }) => (
+  <Layout>
+    <Head>
+      <title>Podcasts</title>
+    </Head>
 
-  if (loading) return <Loading />
-  if (error) return <div>Error :</div>
+    <h1>Podcasts</h1>
+    <p>Podcasts I subscribe to</p>
 
-  const { podcasts } = data
+    <Podcasts collection={podcasts} />
+  </Layout>
+)
 
-  return (
-    <Layout>
-      <Head>
-        <title>Podcasts</title>
-      </Head>
-
-      <h1>Podcasts</h1>
-      <p>Podcasts I subscribe to</p>
-
-      <Podcasts collection={podcasts} />
-    </Layout>
-  )
+Page.getInitialProps = async () => {
+  const { data } = await Api.query({ query: PodcastsQuery })
+  return { ...data }
 }
 
 export default Page
