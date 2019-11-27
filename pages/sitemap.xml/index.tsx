@@ -1,29 +1,26 @@
-import {IncomingMessage} from 'http'
+import { getUri } from '../../lib/getUri'
 
 // tslint:disable-next-line: no-empty
 const Page = () => {}
 
-const getProtocol = req => {
-  let proto = req.connection.encrypted ? 'https' : 'http'
-  proto = req.headers['x-forwarded-proto'] || proto
-  return proto.split(/\s*,\s*/)[0]
-}
-
-const generateSitemap = (req: IncomingMessage) => {
-  const {host} = req.headers
-  const protocol = getProtocol(req)
+const generateSitemap = (req: any) => {
+  const uri = getUri(req)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>${protocol}://${host}/podcasts</loc>
-    </url>
-  </urlset>`
+    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <sitemap>
+        <loc>${uri}/sitemaps/articles.xml</loc>
+      </sitemap>
+
+      <sitemap>
+        <loc>${uri}/sitemaps/others.xml</loc>
+      </sitemap>
+    </sitemapindex>`
 
   return sitemap
 }
 
-Page.getInitialProps = ({req, res}) => {
+Page.getInitialProps = async ({ req, res }) => {
   res.setHeader('Content-Type', 'text/xml')
   res.write(generateSitemap(req))
   res.end()
