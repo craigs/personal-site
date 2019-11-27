@@ -16,7 +16,9 @@ export const HomeQuery = gql`
       author
       id
       image {
-        url
+        handle
+        height
+        width
       }
       link
       subtitle
@@ -27,10 +29,9 @@ export const HomeQuery = gql`
       author
       id
       image {
-        url
         handle
-        width
         height
+        width
       }
       link
       title

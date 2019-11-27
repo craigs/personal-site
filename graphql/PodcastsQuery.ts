@@ -6,7 +6,9 @@ export const PodcastsQuery = gql`
       author
       id
       image {
-        url
+        handle
+        height
+        width
       }
       link
       title

@@ -6,7 +6,9 @@ export const BooksQuery = gql`
       author
       id
       image {
-        url
+        handle
+        height
+        width
       }
       link
       subtitle
