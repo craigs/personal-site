@@ -8,6 +8,7 @@
     "no-submodule-imports": [
       true,
       "classnames/bind",
+      "next/app",
       "next/config",
       "next/head",
       "next/link",
