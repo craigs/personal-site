@@ -10,7 +10,6 @@ const useRouter = {
   }
 }
 
-jest.mock('@apollo/react-hooks', () => ({ useQuery: () => articles }))
 jest.mock('next/router', () => ({ useRouter: () => useRouter }))
 
 it('renders articles', async () => {

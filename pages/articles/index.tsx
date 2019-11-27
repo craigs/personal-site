@@ -1,4 +1,3 @@
-import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
 import { Articles, Layout } from '../../components'
