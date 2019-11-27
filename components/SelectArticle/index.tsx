@@ -1,20 +1,11 @@
-import {useQuery} from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
 import removeMd from 'remove-markdown'
-import {Article, Layout, Loading} from '../../components'
-import {ArticleQuery} from '../../graphql/ArticleQuery'
-import {Api} from '../../lib/Api'
-import {NotFound} from '../../lib/NotFound'
+import { Article, Layout } from '../../components'
+import { NotFound } from '../../lib/NotFound'
 
-export const SelectArticle = ({slug}) => {
-  const options = {client: Api, variables: {slug}}
-  const {loading, error, data} = useQuery(ArticleQuery, options)
-
-  if (loading) return <Loading />
-  if (error) return <div>Error :</div>
-
-  const article = data.article || NotFound
+export const SelectArticle = (props: any) => {
+  const article = props.article || NotFound
 
   return (
     <Layout>
