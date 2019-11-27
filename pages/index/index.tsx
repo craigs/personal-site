@@ -47,7 +47,7 @@ const Page = ({ articles, books, podcasts }) => (
   </Layout>
 )
 
-Page.getInitialProps = async ({ req, res }) => {
+Page.getInitialProps = async () => {
   const { data } = await Api.query({ query: HomeQuery })
   return { ...data }
 }
