@@ -15,7 +15,7 @@ jest.mock('@apollo/react-hooks', () => ({ useQuery: () => article }))
 jest.mock('next/router', () => ({ useRouter: () => useRouter }))
 
 it('renders an article', async () => {
-  const renderer = TestRenderer.create(<SelectArticle slug="work" />)
+  const renderer = TestRenderer.create(<SelectArticle article={article} />)
   const { root } = renderer
 
   expect(root.findByType(Article)).not.toBeNull()

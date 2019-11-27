@@ -1,7 +1,6 @@
-import { useQuery } from '@apollo/react-hooks'
 import Head from 'next/head'
 import React from 'react'
-import { Layout, Loading, Podcasts } from '../../components'
+import { Layout, Podcasts } from '../../components'
 import { PodcastsQuery } from '../../graphql/PodcastsQuery'
 import { Api } from '../../lib/Api'
 
