@@ -28,6 +28,9 @@ export const HomeQuery = gql`
       id
       image {
         url
+        handle
+        width
+        height
       }
       link
       title
