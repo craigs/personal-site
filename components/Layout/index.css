@@ -42,7 +42,6 @@
 
 .content {
   padding: 4.5rem 3rem;
-  padding-bottom: 1rem;
 
   @media (--mobile) {
     padding: 4.5rem 2rem;
