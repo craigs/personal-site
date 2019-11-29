@@ -48,13 +48,3 @@
     padding: 4.5rem 2rem;
   }
 }
-
-.credits {
-  padding-bottom: 1rem;
-  padding-top: 4rem;
-
-  & img {
-    height: 40px;
-    width: auto;
-  }
-}
