@@ -6,14 +6,16 @@ import Styles from './index.css'
 export const Book = ({ link, image, title, subtitle, author }) => (
   <div className={Styles.book}>
     <a href={link} className={Styles.link}>
-      <GraphImg
-        backgroundColor={false}
-        className={Styles.image}
-        fit="scale"
-        image={image}
-        maxWidth={170}
-        withWebp={true}
-      />
+      {process.browser && (
+        <GraphImg
+          backgroundColor={false}
+          className={Styles.image}
+          fit="scale"
+          image={image}
+          maxWidth={170}
+          withWebp={true}
+        />
+      )}
 
       <div>
         <h3>{title}</h3>
