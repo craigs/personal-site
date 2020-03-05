@@ -1,5 +1,4 @@
 import React from 'react'
-import Company from './Company'
 import Links from './Links'
 import Social from './Social'
 
@@ -15,6 +14,5 @@ export default () => (
 
     <Links />
     <Social />
-    <Company />
   </div>
 )
