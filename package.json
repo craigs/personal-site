@@ -81,7 +81,7 @@
     "postcss-global-import": "^1.0.6",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.12.0",
+    "react-test-renderer": "^16.13.0",
     "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
