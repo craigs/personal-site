@@ -49,7 +49,7 @@
     "react-markdown": "^4.3.1",
     "react-swipeable": "^5.5.1",
     "remove-markdown": "^0.3.0",
-    "sanitize-html": "^1.21.1"
+    "sanitize-html": "^1.22.0"
   },
   "devDependencies": {
     "@apollo/react-testing": "^3.1.3",
