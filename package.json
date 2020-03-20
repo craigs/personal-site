@@ -1,8 +1,8 @@
 {
-  "name": "blog",
+  "name": "personal-site",
   "version": "1.0.3",
-  "description": "",
-  "author": "",
+  "description": "This is a personal branding site for Craig Sullivan",
+  "author": "Craig Sullivan",
   "private": true,
   "browserslist": [
     ">1%",
