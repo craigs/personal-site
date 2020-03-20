@@ -1,0 +1,36 @@
+name: version
+
+on:
+  pull_request:
+    types: closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+        if: github.event.pull_request.merged
+        with:
+          ref: refs/heads/master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Version bump
+        run: |
+          npm ci
+          npm run release
+          git config --local user.email "action@users.noreply.github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Push changelog
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          CI: true
