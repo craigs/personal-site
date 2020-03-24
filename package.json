@@ -75,7 +75,7 @@
     "@types/react-test-renderer": "^16.9.2",
     "@types/request": "^2.48.4",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
+    "@typescript-eslint/parser": "^2.25.0",
     "autoprefixer": "^9.7.4",
     "caniuse-lite": "^1.0.30001036",
     "dotenv": "^8.2.0",
