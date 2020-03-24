@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/craigs/personal-site/compare/v1.1.0...v1.2.0) (2020-03-24)
+
+
+### Features
+
+* move to nextjs scss modules ([5db5fc9](https://github.com/craigs/personal-site/commit/5db5fc9b94344518d5bd44962697dae290be27f4))
+
 ## [1.1.0](https://github.com/craigs/personal-site/compare/v1.0.2...v1.1.0) (2020-03-20)
 
 
