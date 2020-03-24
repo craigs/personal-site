@@ -1,7 +1,7 @@
 import React from 'react'
 import { Podcast } from '../Podcast'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Podcasts = ({ collection }) => (
   <div className={Styles.podcasts}>

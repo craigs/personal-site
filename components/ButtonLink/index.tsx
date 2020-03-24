@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const ButtonLink = ({ link, as, label }) => (
   <Link href={link} as={as}>

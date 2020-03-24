@@ -2,6 +2,8 @@ import App from 'next/app'
 import React from 'react'
 import TagManager from 'react-gtm-module'
 
+import '../styles/index.scss'
+
 class MainApp extends App {
   public componentDidMount() {
     if (!process.env.GTM_ID) return

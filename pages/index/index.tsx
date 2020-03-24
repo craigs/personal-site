@@ -11,7 +11,7 @@ import {
 import { HomeQuery } from '../../graphql/HomeQuery'
 import { Api } from '../../lib/Api'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 const Page = ({ articles, books, podcasts }) => (
   <Layout>

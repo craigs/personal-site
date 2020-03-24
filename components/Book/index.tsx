@@ -1,7 +1,7 @@
 import GraphImg from 'graphcms-image'
 import React from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Book = ({ link, image, title, subtitle, author }) => (
   <div className={Styles.book}>

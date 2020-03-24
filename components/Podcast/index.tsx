@@ -1,7 +1,7 @@
 import GraphImg from 'graphcms-image'
 import React from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Podcast = ({ link, image, title, author }) => (
   <a href={link} className={Styles.podcast}>

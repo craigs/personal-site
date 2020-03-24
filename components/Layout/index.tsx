@@ -4,8 +4,7 @@ import { Swipeable } from 'react-swipeable'
 import Favicon from './Favicon'
 import Sidebar from './Sidebar'
 
-import '../../styles/index.css'
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Layout = ({ children }) => {
   const [open, setOpen] = useState(false)

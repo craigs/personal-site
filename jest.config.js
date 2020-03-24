@@ -7,7 +7,7 @@ module.exports = {
     '<rootDir>/pages/**/__tests__/*.test.{ts,tsx}'
   ],
   moduleNameMapper: {
-    '\\.css$': 'identity-obj-proxy'
+    '\\.scss$': 'identity-obj-proxy'
   },
   globals: {
     'ts-jest': {

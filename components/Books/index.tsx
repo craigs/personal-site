@@ -1,7 +1,7 @@
 import React from 'react'
 import { Book } from '../Book'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Books = ({ collection }) => (
   <div className={Styles.books}>

@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export const Subscribe = () => {
-  const [data, setData] = useState({msg: null})
+  const [data, setData] = useState({ msg: null })
   const [loading, setLoading] = useState(false)
   const [subscribed, setSubscribed] = useState(false)
   const [email, setEmail] = useState(null)
@@ -15,7 +15,7 @@ export const Subscribe = () => {
     setLoading(true)
 
     const response = await fetch('/api/subscribe', {
-      body: JSON.stringify({email}),
+      body: JSON.stringify({ email }),
       method: 'POST'
     })
 

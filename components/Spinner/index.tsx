@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind'
 import React from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 const css = classNames.bind(Styles)
 

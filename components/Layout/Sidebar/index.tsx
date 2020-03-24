@@ -2,7 +2,7 @@ import React from 'react'
 import Links from './Links'
 import Social from './Social'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export default () => (
   <div className={Styles.sidebar}>

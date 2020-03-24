@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
 export default () => (
   <div className={Styles.social}>
