@@ -6,6 +6,10 @@ Field: title
 Type: String, single line text
 required
 
+Field: teaser
+Type: String, single line text
+required
+
 Field: slug
 Type: String, single line text
 unique, required

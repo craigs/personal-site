@@ -55,9 +55,7 @@
     "react-dom": "^16.13.1",
     "react-gtm-module": "^2.0.8",
     "react-markdown": "^4.3.1",
-    "react-swipeable": "^5.5.1",
-    "remove-markdown": "^0.3.0",
-    "sanitize-html": "^1.22.1"
+    "react-swipeable": "^5.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
