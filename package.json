@@ -70,7 +70,7 @@
     "@types/react-gtm-module": "^2.0.0",
     "@types/react-test-renderer": "^16.9.2",
     "@types/request": "^2.48.4",
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.25.0",
     "autoprefixer": "^9.7.5",
     "caniuse-lite": "^1.0.30001038",
