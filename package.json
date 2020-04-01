@@ -50,7 +50,7 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^9.3.3",
+    "next": "^9.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-gtm-module": "^2.0.8",
