@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/craigs/personal-site/compare/v1.3.47...v1.4.0) (2020-06-09)
+
+
+### Features
+
+* add asdf config ([72da210](https://github.com/craigs/personal-site/commit/72da2108090f29927389a23a600f74a61fa1f8a5))
+* city-of-melbourne logo ([6769274](https://github.com/craigs/personal-site/commit/6769274dd708bf1b577d3639e67a88df0de5adee))
+
 ### [1.3.47](https://github.com/craigs/personal-site/compare/v1.3.46...v1.3.47) (2020-04-09)
 
 ### [1.3.46](https://github.com/craigs/personal-site/compare/v1.3.45...v1.3.46) (2020-04-09)
