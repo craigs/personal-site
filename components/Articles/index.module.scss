@@ -1,9 +1,11 @@
+@import '../../styles/mixins/breakpoints.scss';
+
 .articles {
   display: grid;
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 300px);
 
-  @media (--mobile) {
+  @include mobile {
     display: block;
 
     & a {

@@ -22,10 +22,6 @@ body {
   color: #ffffff;
   font-weight: 400;
   font-size: 17px;
-
-  @media (--mobile) {
-    font-size: 17px;
-  }
 }
 
 hr {
