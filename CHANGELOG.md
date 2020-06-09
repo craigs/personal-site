@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/craigs/personal-site/compare/v1.5.1...v1.6.0) (2020-06-09)
+
+
+### Features
+
+* now renamed to vercel ([7c78044](https://github.com/craigs/personal-site/commit/7c780441c00f3148a32fc928427523c38a589277))
+
 ### [1.5.1](https://github.com/craigs/personal-site/compare/v1.5.0...v1.5.1) (2020-06-09)
 
 ## [1.5.0](https://github.com/craigs/personal-site/compare/v1.3.47...v1.5.0) (2020-06-09)
