@@ -1,0 +1,16 @@
+{
+  "env": {
+    "CM_API": "@craigs-cm-api-production-mbv9",
+    "CM_LISTID": "@craigs-cm-listid-production-lhc2",
+    "GRAPHCMS_API": "@craigs-graphcms-api-production-rg45",
+    "GTM_ID": "@craigs-gtm-id-production-kocx"
+  },
+  "build": {
+    "env": {
+      "CM_API": "@craigs-cm-api-production-mbv9",
+      "CM_LISTID": "@craigs-cm-listid-production-lhc2",
+      "GRAPHCMS_API": "@craigs-graphcms-api-production-rg45",
+      "GTM_ID": "@craigs-gtm-id-production-kocx"
+    }
+  }
+}
