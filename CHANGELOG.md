@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/craigs/personal-site/compare/v1.7.0...v1.8.0) (2020-06-21)
+
+
+### Features
+
+* update dependencies ([e647d8d](https://github.com/craigs/personal-site/commit/e647d8ddf9bc045cb5190fdddf91ce8e478c1a2b))
+
 ## [1.7.0](https://github.com/craigs/personal-site/compare/v1.6.0...v1.7.0) (2020-06-09)
 
 
