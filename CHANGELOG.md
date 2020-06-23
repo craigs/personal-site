@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/craigs/personal-site/compare/v1.8.0...v1.9.0) (2020-06-23)
+
+
+### Features
+
+* add TypeScript types for next ([84ca124](https://github.com/craigs/personal-site/commit/84ca124fb9ab72d16ebbf66ccb2f203ce9b8b03e))
+
 ## [1.8.0](https://github.com/craigs/personal-site/compare/v1.7.0...v1.8.0) (2020-06-21)
 
 
