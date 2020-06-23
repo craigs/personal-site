@@ -90,7 +90,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
-    "sass": "^1.26.8",
+    "sass": "^1.26.9",
     "standard-version": "^8.0.0",
     "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
