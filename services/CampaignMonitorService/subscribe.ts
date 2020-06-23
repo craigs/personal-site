@@ -1,10 +1,16 @@
 import fetch from 'isomorphic-fetch'
-import ICampaignMonitorError from './ICampaignMonitorError'
 
 const BASE_URL = 'https://api.createsend.com/api/v3.1'
 const SUBSCRIBER_API = `${BASE_URL}/subscribers`
 
-export default async (email: string): Promise<ICampaignMonitorError> => {
+interface ICampaignMonitorError {
+  Code: number
+  Message: string
+}
+
+export const subscribe = async (
+  email: string
+): Promise<ICampaignMonitorError> => {
   const { CM_API, CM_LISTID } = process.env
   const options = { EmailAddress: email }
   const url = `${SUBSCRIBER_API}/${CM_LISTID}.json`
@@ -19,9 +25,9 @@ export default async (email: string): Promise<ICampaignMonitorError> => {
   })
 
   const { status } = response
-
   if (status >= 200 && status <= 202) return null
 
   const text = await response.text()
+
   return JSON.parse(text)
 }

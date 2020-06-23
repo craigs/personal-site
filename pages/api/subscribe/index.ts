@@ -1,6 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import sendError from './sendError'
-import subscribe from './subscribe'
+import { CampaignMonitorService } from '../../../services/CampaignMonitorService'
+
+const sendError = (response: NextApiResponse, msg: string): void => {
+  response.status(406).json({ msg })
+}
 
 const Api = async (
   request: NextApiRequest,
@@ -11,7 +14,7 @@ const Api = async (
 
   if (!email) return sendError(response, 'Email address not entered')
 
-  const error = await subscribe(email)
+  const error = await CampaignMonitorService.subscribe(email)
 
   if (error) return sendError(response, error.Message)
 
