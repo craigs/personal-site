@@ -1,4 +1,6 @@
-export default {
+import { IPodcast } from '~typings/IPodcast'
+
+const Podcast: IPodcast = {
   author: 'Craig',
   id: 1,
   image: {
@@ -7,3 +9,5 @@ export default {
   link: 'http://localhost/',
   title: 'My local podcast'
 }
+
+export default Podcast

@@ -5,7 +5,7 @@ import article from '../../../fixtures/article'
 import { Article } from '../../index'
 
 it('renders an article', () => {
-  const renderer = TestRenderer.create(<Article {...article} />)
+  const renderer = TestRenderer.create(<Article article={article} />)
   const { root } = renderer
 
   expect(root).not.toBeNull()

@@ -1,21 +1,28 @@
 import Head from 'next/head'
-import React from 'react'
-import { Article, Layout } from '../../components'
-import { NotFound } from '../../lib/NotFound'
+import React, { FC } from 'react'
+import { Article, Layout } from '~components/index'
+import { NotFound } from '~lib/NotFound'
+import { IArticle } from '~typings/IArticle'
 
-export const SelectArticle = (props: any) => {
-  const article = props.article || NotFound
+interface ISelectArticleProps {
+  article: IArticle
+}
+
+export const SelectArticle: FC<ISelectArticleProps> = props => {
+  const { article } = props
+  const selected = article || NotFound
+  const { title, teaser } = selected
 
   return (
     <Layout>
       <Head>
-        <title>{article.title}</title>
+        <title>{title}</title>
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={article.title} />
-        <meta property="og:description" content={article.teaser} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={teaser} />
       </Head>
 
-      <Article {...article} />
+      <Article article={selected} />
     </Layout>
   )
 }

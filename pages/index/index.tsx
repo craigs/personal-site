@@ -1,3 +1,4 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import {
@@ -7,13 +8,27 @@ import {
   Layout,
   Podcasts,
   Subscribe
-} from '../../components'
-import { HomeQuery } from '../../graphql/HomeQuery'
-import { Api } from '../../lib/Api'
+} from '~components/index'
+import { HomeQuery } from '~graphql/HomeQuery'
+import { Api } from '~lib/Api'
+import { IArticle } from '~typings/IArticle'
+import { IBook } from '~typings/IBook'
+import { IPodcast } from '~typings/IPodcast'
 
 import Styles from './index.module.scss'
 
-const Page = ({ articles, books, podcasts }) => (
+export const getServerSideProps = async () => {
+  const { data } = await Api.query({ query: HomeQuery })
+  return { props: { ...data } }
+}
+
+interface IPageProps {
+  articles: IArticle[]
+  books: IBook[]
+  podcasts: IPodcast[]
+}
+
+const Page: NextPage<IPageProps> = ({ articles, books, podcasts }) => (
   <Layout>
     <Head>
       <title>craigs.io - welcome</title>
@@ -46,10 +61,5 @@ const Page = ({ articles, books, podcasts }) => (
     </div>
   </Layout>
 )
-
-Page.getInitialProps = async () => {
-  const { data } = await Api.query({ query: HomeQuery })
-  return { ...data }
-}
 
 export default Page

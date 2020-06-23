@@ -3,4 +3,5 @@ declare module '*.scss' {
   export = content
 }
 
+declare module 'graphcms-image'
 declare module 'react-markdown/with-html'

@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "tsconfigRootDir": "./",
+    "project": "tsconfig.json",
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react-hooks", "@typescript-eslint", "react"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "no-console": 0,
+    "no-implicit-dependencies": 0,
+    "no-submodule-imports": [
+      0,
+      "~components",
+      "~lib",
+      "~typings",
+      "classnames/bind",
+      "next/app",
+      "next/config",
+      "next/document",
+      "next/head",
+      "next/link",
+      "next/router",
+      "react-markdown/with-html"
+    ],
+    "curly": [2, "multi"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none"
+        }
+      }
+    ]
+  }
+}

@@ -5,6 +5,6 @@ import Styles from './index.module.scss'
 
 export const Loading = () => (
   <div className={Styles.loading}>
-    <Spinner large="true" />
+    <Spinner large={true} />
   </div>
 )

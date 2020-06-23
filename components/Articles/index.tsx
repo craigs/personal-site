@@ -1,9 +1,14 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { FC } from 'react'
+import { IArticle } from '~typings/IArticle'
 
 import Styles from './index.module.scss'
 
-export const Articles = ({ collection }) => (
+interface IArticlesProps {
+  collection: IArticle[]
+}
+
+export const Articles: FC<IArticlesProps> = ({ collection }) => (
   <div className={Styles.articles}>
     {collection.map(article => (
       <div key={article.id}>

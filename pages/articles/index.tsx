@@ -1,10 +1,27 @@
 import Head from 'next/head'
 import React from 'react'
-import { Articles, Layout } from '../../components'
-import { ArticlesQuery } from '../../graphql/ArticlesQuery'
-import { Api } from '../../lib/Api'
+import { NextPage } from 'next'
+import { Articles, Layout } from '~components/index'
+import { ArticlesQuery } from '~graphql/ArticlesQuery'
+import { Api } from '~lib/Api'
+import { IArticle } from '~typings/IArticle'
 
-const Page = ({ articles }) => (
+export const getServerSideProps = async () => {
+  const category = 'article'
+
+  const { data } = await Api.query({
+    query: ArticlesQuery,
+    variables: { category }
+  })
+
+  return { props: { ...data } }
+}
+
+interface IPageProps {
+  articles: IArticle[]
+}
+
+const Page: NextPage<IPageProps> = ({ articles }) => (
   <Layout>
     <Head>
       <title>Articles</title>
@@ -13,16 +30,5 @@ const Page = ({ articles }) => (
     <Articles collection={articles} />
   </Layout>
 )
-
-Page.getInitialProps = async () => {
-  const category = 'article'
-
-  const { data } = await Api.query({
-    query: ArticlesQuery,
-    variables: { category }
-  })
-
-  return { ...data }
-}
 
 export default Page

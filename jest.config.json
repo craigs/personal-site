@@ -1,0 +1,24 @@
+{
+  "preset": "ts-jest",
+  "testMatch": [
+    "<rootDir>/__tests__/**/*.test.{ts,tsx}",
+    "<rootDir>/components/**/__tests__/*.test.{ts,tsx}",
+    "<rootDir>/lib/**/__tests__/*.test.{ts,tsx}",
+    "<rootDir>/pages/**/__tests__/*.test.{ts,tsx}"
+  ],
+  "moduleNameMapper": {
+    "\\.scss$": "identity-obj-proxy",
+    "~components/(.*)": "<rootDir>/components/$1",
+    "~graphql/(.*)": "<rootDir>/graphql/$1",
+    "~lib/(.*)": "<rootDir>/lib/$1",
+    "~typings/(.*)": "<rootDir>/typings/$1"
+  },
+  "globals": {
+    "ts-jest": {
+      "diagnostics": false,
+      "tsConfig": "jest.tsconfig.json"
+    }
+  },
+  "setupFiles": [],
+  "testPathIgnorePatterns": ["<rootDir>/.next/", "<rootDir>/node_modules/"]
+}

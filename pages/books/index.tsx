@@ -1,10 +1,22 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { Books, Layout } from '../../components'
-import { BooksQuery } from '../../graphql/BooksQuery'
-import { Api } from '../../lib/Api'
+import { Books, Layout } from '~components/index'
+import { BooksQuery } from '~graphql/BooksQuery'
+import { Api } from '~lib/Api'
+import { IBook } from '~typings/IBook'
 
-const Page = ({ books }) => (
+export const getServerSideProps = async () => {
+  const { data } = await Api.query({ query: BooksQuery })
+
+  return { props: { ...data } }
+}
+
+interface IPageProps {
+  books: IBook[]
+}
+
+const Page: NextPage<IPageProps> = ({ books }) => (
   <Layout>
     <Head>
       <title>Books, Audiobooks</title>
@@ -16,10 +28,5 @@ const Page = ({ books }) => (
     <Books collection={books} />
   </Layout>
 )
-
-Page.getInitialProps = async () => {
-  const { data } = await Api.query({ query: BooksQuery })
-  return { ...data }
-}
 
 export default Page

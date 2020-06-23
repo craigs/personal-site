@@ -1,17 +1,21 @@
 import React from 'react'
-import { SelectArticle } from '../../components'
-import { findArticle } from '../../lib/findArticle'
+import { NextPage } from 'next'
+import { SelectArticle } from '~components/index'
+import { findArticle } from '~lib/findArticle'
+import { IArticle } from '~typings/IArticle'
 
-const Page = (props: any) => <SelectArticle {...props} />
-
-Page.getInitialProps = async context => {
-  const {
-    query: { slug }
-  } = context
-
+export const getServerSideProps = async ({ query: { slug } }) => {
   const article = await findArticle(slug)
 
-  return { ...article }
+  return { props: { article } }
 }
+
+interface IPageProps {
+  article: IArticle
+}
+
+const Page: NextPage<IPageProps> = ({ article }) => (
+  <SelectArticle article={article} />
+)
 
 export default Page

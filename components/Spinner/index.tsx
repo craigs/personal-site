@@ -1,17 +1,21 @@
 import classNames from 'classnames/bind'
-import React from 'react'
+import React, { FC } from 'react'
 
 import Styles from './index.module.scss'
 
 const css = classNames.bind(Styles)
 
-export const Spinner = (props: any) => {
+interface ISpinnerProps {
+  large?: boolean
+  medium?: boolean
+  small?: boolean
+  white?: boolean
+}
+
+export const Spinner: FC<ISpinnerProps> = props => {
   const classes = css({
-    large: props.large,
-    medium: props.medium,
-    small: props.small,
     spinner: true,
-    white: props.white
+    ...props
   })
 
   return (

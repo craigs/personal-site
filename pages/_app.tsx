@@ -6,10 +6,10 @@ import '../styles/index.scss'
 
 class MainApp extends App {
   public componentDidMount() {
-    if (!process.env.GTM_ID) return
+    if (!process.env.NEXT_PUBLIC_GTM_ID) return
 
     TagManager.initialize({
-      gtmId: process.env.GTM_ID
+      gtmId: process.env.NEXT_PUBLIC_GTM_ID
     })
   }
 

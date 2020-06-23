@@ -1,10 +1,22 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { Layout, Podcasts } from '../../components'
-import { PodcastsQuery } from '../../graphql/PodcastsQuery'
-import { Api } from '../../lib/Api'
+import { IPodcast } from '~typings/IPodcast'
+import { Layout, Podcasts } from '~components/index'
+import { PodcastsQuery } from '~graphql/PodcastsQuery'
+import { Api } from '~lib/Api'
 
-const Page = ({ podcasts }) => (
+export const getServerSideProps = async () => {
+  const { data } = await Api.query({ query: PodcastsQuery })
+
+  return { props: { ...data } }
+}
+
+interface IPageProps {
+  podcasts: IPodcast[]
+}
+
+const Page: NextPage<IPageProps> = ({ podcasts }) => (
   <Layout>
     <Head>
       <title>Podcasts</title>
@@ -16,10 +28,5 @@ const Page = ({ podcasts }) => (
     <Podcasts collection={podcasts} />
   </Layout>
 )
-
-Page.getInitialProps = async () => {
-  const { data } = await Api.query({ query: PodcastsQuery })
-  return { ...data }
-}
 
 export default Page

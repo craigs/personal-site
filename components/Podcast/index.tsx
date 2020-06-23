@@ -1,9 +1,10 @@
+import React, { FC } from 'react'
 import GraphImg from 'graphcms-image'
-import React from 'react'
+import { IPodcast } from '~typings/IPodcast'
 
 import Styles from './index.module.scss'
 
-export const Podcast = ({ link, image, title, author }) => (
+export const Podcast: FC<IPodcast> = ({ link, image, title, author }) => (
   <a href={link} className={Styles.podcast}>
     {process.browser && (
       <GraphImg
