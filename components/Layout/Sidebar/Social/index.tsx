@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 
 import Styles from './index.module.scss'
 
-export default () => (
+const Social: FC<ReactNode> = () => (
   <div className={Styles.social}>
     <hr />
 
@@ -22,3 +22,5 @@ export default () => (
     </a>
   </div>
 )
+
+export default Social

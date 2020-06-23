@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 
-export default () => (
+const Favicon: FC<ReactNode> = () => (
   <>
     <link
       rel="apple-touch-icon"
@@ -80,3 +80,5 @@ export default () => (
     <meta name="theme-color" content="#ffffff"></meta>
   </>
 )
+
+export default Favicon

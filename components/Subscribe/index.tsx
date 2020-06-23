@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 
 import Styles from './index.module.scss'
 
-export const Subscribe = () => {
+export const Subscribe: FC<ReactNode> = () => {
   const [data, setData] = useState({ msg: null })
   const [loading, setLoading] = useState(false)
   const [subscribed, setSubscribed] = useState(false)

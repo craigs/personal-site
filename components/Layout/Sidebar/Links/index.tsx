@@ -1,14 +1,14 @@
 import classNames from 'classnames/bind'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 import { Dot } from './Dot'
 import links from './links'
 
 import Styles from './index.module.scss'
 const css = classNames.bind(Styles)
 
-export default () => {
+const Links: FC<ReactNode> = () => {
   const { asPath } = useRouter()
 
   const renderLink = ({ href, as, name }) => {
@@ -38,3 +38,5 @@ export default () => {
     </div>
   )
 }
+
+export default Links

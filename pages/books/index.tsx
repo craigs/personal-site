@@ -6,7 +6,13 @@ import { BooksQuery } from '~graphql/BooksQuery'
 import { Api } from '~lib/Api'
 import { IBook } from '~typings/IBook'
 
-export const getServerSideProps = async () => {
+interface IServerSideProps {
+  props: {
+    books: IBook[]
+  }
+}
+
+export const getServerSideProps = async (): Promise<IServerSideProps> => {
   const { data } = await Api.query({ query: BooksQuery })
 
   return { props: { ...data } }

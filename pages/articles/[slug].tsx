@@ -4,7 +4,21 @@ import { SelectArticle } from '~components/index'
 import { findArticle } from '~lib/findArticle'
 import { IArticle } from '~typings/IArticle'
 
-export const getServerSideProps = async ({ query: { slug } }) => {
+interface IServerSideProps {
+  props: {
+    article: IArticle
+  }
+}
+
+interface IProps {
+  query: {
+    slug: string
+  }
+}
+
+export const getServerSideProps = async ({
+  query: { slug }
+}: IProps): Promise<IServerSideProps> => {
   const article = await findArticle(slug)
 
   return { props: { article } }

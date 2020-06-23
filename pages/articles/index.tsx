@@ -6,7 +6,13 @@ import { ArticlesQuery } from '~graphql/ArticlesQuery'
 import { Api } from '~lib/Api'
 import { IArticle } from '~typings/IArticle'
 
-export const getServerSideProps = async () => {
+interface IServerSideProps {
+  props: {
+    articles: IArticle[]
+  }
+}
+
+export const getServerSideProps = async (): Promise<IServerSideProps> => {
   const category = 'article'
 
   const { data } = await Api.query({

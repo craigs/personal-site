@@ -1,7 +1,6 @@
-import { getUri } from '../../lib/getUri'
-
-// tslint:disable-next-line: no-empty
-const Page = () => {}
+import { GetServerSideProps } from 'next'
+import { FC, ReactNode } from 'react'
+import { getUri } from '~lib/getUri'
 
 const generateSitemap = (req: any) => {
   const uri = getUri(req)
@@ -20,10 +19,14 @@ const generateSitemap = (req: any) => {
   return sitemap
 }
 
-Page.getInitialProps = async ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
   res.setHeader('Content-Type', 'text/xml')
   res.write(generateSitemap(req))
   res.end()
+
+  return null
 }
+
+const Page: FC<ReactNode> = () => null
 
 export default Page

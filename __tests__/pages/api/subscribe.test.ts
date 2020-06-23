@@ -9,6 +9,7 @@ const mockResponse = () => {
   res.json = jest.fn().mockReturnValue(res)
   return res
 }
+
 describe('subscribe', () => {
   const originalEnv = process.env
 
@@ -50,7 +51,7 @@ describe('subscribe', () => {
     const req = { body: JSON.stringify({ email }) }
     const res = mockResponse()
 
-    const scope = nock('https://api.createsend.com')
+    nock('https://api.createsend.com')
       .post(`/api/v3.1/subscribers/${process.env.CM_LISTID}.json`)
       .reply(400, { Code: 204, Message: 'In Suppression List' })
 

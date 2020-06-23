@@ -1,13 +1,21 @@
+import { NextApiRequest, NextApiResponse } from 'next'
 import sendError from './sendError'
 import subscribe from './subscribe'
 
-export default async ({ body }, res) => {
+const Api = async (
+  request: NextApiRequest,
+  response: NextApiResponse
+): Promise<void> => {
+  const { body } = request
   const { email } = JSON.parse(body)
-  if (!email) return sendError(res, 'Email address not entered')
+
+  if (!email) return sendError(response, 'Email address not entered')
 
   const error = await subscribe(email)
 
-  if (error) return sendError(res, error.Message)
+  if (error) return sendError(response, error.Message)
 
-  res.status(200).json({ msg: 'OK' })
+  response.status(200).json({ msg: 'OK' })
 }
+
+export default Api

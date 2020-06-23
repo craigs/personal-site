@@ -1,7 +1,9 @@
+import { FC, ReactNode } from 'react'
 import { IncomingMessage } from 'http'
-import { getUri } from '../../../lib/getUri'
+import { getUri } from '~lib/getUri'
+import { GetServerSideProps } from 'next'
 
-export const generate = (req: IncomingMessage) => {
+export const generate = (req: IncomingMessage): string => {
   const uri = getUri(req)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -23,13 +25,14 @@ export const generate = (req: IncomingMessage) => {
   return sitemap
 }
 
-// tslint:disable-next-line: no-empty
-const Page = () => {}
-
-Page.getInitialProps = ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
   res.setHeader('Content-Type', 'text/xml')
   res.write(generate(req))
   res.end()
+
+  return null
 }
+
+const Page: FC<ReactNode> = () => null
 
 export default Page

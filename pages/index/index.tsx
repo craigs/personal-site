@@ -17,15 +17,23 @@ import { IPodcast } from '~typings/IPodcast'
 
 import Styles from './index.module.scss'
 
-export const getServerSideProps = async () => {
-  const { data } = await Api.query({ query: HomeQuery })
-  return { props: { ...data } }
+interface IServerSideProps {
+  props: {
+    articles: IArticle[]
+    books: IBook[]
+    podcasts: IPodcast[]
+  }
 }
 
 interface IPageProps {
   articles: IArticle[]
   books: IBook[]
   podcasts: IPodcast[]
+}
+
+export const getServerSideProps = async (): Promise<IServerSideProps> => {
+  const { data } = await Api.query({ query: HomeQuery })
+  return { props: { ...data } }
 }
 
 const Page: NextPage<IPageProps> = ({ articles, books, podcasts }) => (

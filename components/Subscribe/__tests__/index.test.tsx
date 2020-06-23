@@ -1,6 +1,6 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import {Subscribe} from '../index'
+import { Subscribe } from '../index'
 
 describe('Subscribe', () => {
   it('can be instantiated', () => {

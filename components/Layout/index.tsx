@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import React, { useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 import { Swipeable } from 'react-swipeable'
 import Favicon from './Favicon'
 import Sidebar from './Sidebar'
 
 import Styles from './index.module.scss'
 
-export const Layout = ({ children }) => {
+export const Layout: FC<ReactNode> = ({ children }) => {
   const [open, setOpen] = useState(false)
 
   const config = {

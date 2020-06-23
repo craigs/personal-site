@@ -6,7 +6,13 @@ import { Layout, Podcasts } from '~components/index'
 import { PodcastsQuery } from '~graphql/PodcastsQuery'
 import { Api } from '~lib/Api'
 
-export const getServerSideProps = async () => {
+interface IServerSideProps {
+  props: {
+    podcasts: IPodcast[]
+  }
+}
+
+export const getServerSideProps = async (): Promise<IServerSideProps> => {
   const { data } = await Api.query({ query: PodcastsQuery })
 
   return { props: { ...data } }

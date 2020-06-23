@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 import Links from './Links'
 import Social from './Social'
 
 import Styles from './index.module.scss'
 
-export default () => (
+const Sidebar: FC<ReactNode> = () => (
   <div className={Styles.sidebar}>
     <div className={Styles.home}>
       <a href="/">
@@ -16,3 +16,5 @@ export default () => (
     <Social />
   </div>
 )
+
+export default Sidebar
