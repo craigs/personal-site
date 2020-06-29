@@ -47,7 +47,7 @@
     "apollo-link-http": "^1.5.17",
     "classnames": "^2.2.6",
     "graphcms-image": "=1.1.0-beta4",
-    "graphql": "^15.1.0",
+    "graphql": "^15.2.0",
     "graphql-tag": "^2.10.3",
     "isomorphic-fetch": "^2.2.1",
     "next": "^9.4.4",
