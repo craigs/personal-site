@@ -77,7 +77,7 @@
     "cz-conventional-changelog": "^3.2.0",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.8.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-prettier": "^3.1.4",
