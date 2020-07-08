@@ -76,7 +76,7 @@
     "caniuse-lite": "^1.0.30001096",
     "cz-conventional-changelog": "^3.2.0",
     "dotenv": "^8.2.0",
-    "dotenv-webpack": "^1.8.0",
+    "dotenv-webpack": "^2.0.0",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-css-modules": "^2.11.0",
