@@ -73,7 +73,7 @@
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "autoprefixer": "^9.8.5",
-    "caniuse-lite": "^1.0.30001102",
+    "caniuse-lite": "^1.0.30001103",
     "cz-conventional-changelog": "^3.2.0",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^2.0.0",
