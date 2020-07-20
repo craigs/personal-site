@@ -58,7 +58,7 @@
     "react-swipeable": "^5.5.1"
   },
   "devDependencies": {
-    "@apollo/react-testing": "^3.1.4",
+    "@apollo/react-testing": "^4.0.0",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "@types/classnames": "^2.2.10",
