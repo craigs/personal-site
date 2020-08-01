@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/craigs/personal-site/compare/v1.11.27...v1.12.0) (2020-08-01)
+
+
+### Features
+
+* upgrade dependencies, move to src folder ([9c8cc15](https://github.com/craigs/personal-site/commit/9c8cc15d300318216b59e65851a9dae98bf66410))
+
 ### [1.11.27](https://github.com/craigs/personal-site/compare/v1.11.26...v1.11.27) (2020-07-06)
 
 ### [1.11.26](https://github.com/craigs/personal-site/compare/v1.11.25...v1.11.26) (2020-07-06)
