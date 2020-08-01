@@ -1,17 +1,12 @@
 {
   "preset": "ts-jest",
-  "testMatch": [
-    "<rootDir>/__tests__/**/*.test.{ts,tsx}",
-    "<rootDir>/components/**/__tests__/*.test.{ts,tsx}",
-    "<rootDir>/lib/**/__tests__/*.test.{ts,tsx}",
-    "<rootDir>/pages/**/__tests__/*.test.{ts,tsx}"
-  ],
+  "testMatch": ["<rootDir>/src/**/__tests__/*.test.{ts,tsx}"],
   "moduleNameMapper": {
     "\\.scss$": "identity-obj-proxy",
-    "~components/(.*)": "<rootDir>/components/$1",
-    "~graphql/(.*)": "<rootDir>/graphql/$1",
-    "~lib/(.*)": "<rootDir>/lib/$1",
-    "~typings/(.*)": "<rootDir>/typings/$1"
+    "~components/(.*)": "<rootDir>/src/components/$1",
+    "~graphql/(.*)": "<rootDir>/src/graphql/$1",
+    "~lib/(.*)": "<rootDir>/src/lib/$1",
+    "~typings/(.*)": "<rootDir>/src/typings/$1"
   },
   "globals": {
     "ts-jest": {
@@ -19,6 +14,6 @@
       "tsConfig": "jest.tsconfig.json"
     }
   },
-  "setupFiles": [],
+  "setupFiles": ["jest-canvas-mock"],
   "testPathIgnorePatterns": ["<rootDir>/.next/", "<rootDir>/node_modules/"]
 }
