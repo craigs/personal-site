@@ -1,6 +1,6 @@
 {
   "name": "personal-site",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "description": "This is a personal branding site for Craig Sullivan",
   "author": "Craig Sullivan",
   "private": true,
@@ -11,8 +11,10 @@
     "not ie < 9"
   ],
   "main": "index.js",
-   "jest": {
-    "setupFiles": ["jest-canvas-mock"]
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
   },
   "scripts": {
     "dev": "next",
