@@ -27,8 +27,8 @@ for this site to function.
 Set the GRAPHCMS_API environment API endpoint in
 [next.config.js](next.config.js)
 
-You will also want to ensure that the GraphCMS API is open to the public, but
-also read only.
+You will want to ensure that the GraphCMS API is open to the public and read
+only.
 
 ## Running the server
 
