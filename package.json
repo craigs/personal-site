@@ -11,6 +11,9 @@
     "not ie < 9"
   ],
   "main": "index.js",
+   "jest": {
+    "setupFiles": ["jest-canvas-mock"]
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
