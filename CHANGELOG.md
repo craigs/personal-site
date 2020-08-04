@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.5](https://github.com/craigs/personal-site/compare/v1.12.4...v1.12.5) (2020-08-04)
+
 ### [1.12.4](https://github.com/craigs/personal-site/compare/v1.12.3...v1.12.4) (2020-08-02)
 
 ### [1.12.3](https://github.com/craigs/personal-site/compare/v1.12.2...v1.12.3) (2020-08-01)
