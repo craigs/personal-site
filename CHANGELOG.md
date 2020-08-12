@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/craigs/personal-site/compare/v1.12.13...v1.13.0) (2020-08-12)
+
+
+### Features
+
+* add suppoort for flexible content blocks ([10f454f](https://github.com/craigs/personal-site/commit/10f454fcef16df0eb27777e7a6199bed111b149d))
+
 ### [1.12.13](https://github.com/craigs/personal-site/compare/v1.12.12...v1.12.13) (2020-08-10)
 
 ### [1.12.12](https://github.com/craigs/personal-site/compare/v1.12.11...v1.12.12) (2020-08-08)
