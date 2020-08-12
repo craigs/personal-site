@@ -6,8 +6,7 @@ import {
   Books,
   ButtonLink,
   Layout,
-  Podcasts,
-  Subscribe
+  Podcasts
 } from '~components/index'
 import { HomeQuery } from '~graphql/HomeQuery'
 import { Api } from '~lib/Api'
@@ -62,10 +61,6 @@ const Page: NextPage<IPageProps> = ({ articles, books, podcasts }) => (
 
       <Podcasts collection={podcasts} />
       <ButtonLink label="more podcasts" as="/podcasts" link="/podcasts" />
-    </div>
-
-    <div className={Styles.section}>
-      <Subscribe />
     </div>
   </Layout>
 )

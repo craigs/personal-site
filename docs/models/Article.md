@@ -2,6 +2,9 @@
 
 This is the model definition for an Article on GraphCMS
 
+Field: coverImage
+Type: reference, ContentImage
+
 Field: title
 Type: String, single line text
 required
@@ -17,6 +20,6 @@ unique, required
 Field: category
 Type: String, single line text
 
-Field: body
-Type: String, markdown
+Field: contents
+Type: reference, Content
 required

@@ -3,7 +3,7 @@ import TestRenderer from 'react-test-renderer'
 import { Article } from '../../index'
 import { SelectArticle } from '../index'
 
-import article from './data/article'
+import article from '../../../fixtures/article'
 
 const useRouter = {
   asPath: {

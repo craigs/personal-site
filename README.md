@@ -17,6 +17,8 @@ The following GraphCMS models are used in this system ...
 
 - [Article](docs/models/Article.md)
 - [Book](docs/models/Book.md)
+- [Content](docs/models/Content.md)
+- [ContentImage](docs/models/ContentImage.md)
 - [Podcast](docs/models/Podcast.md)
 
 You will need to create the models according the specifications above in order

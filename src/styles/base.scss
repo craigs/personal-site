@@ -1,9 +1,15 @@
 html,
 body {
   background: #18181e;
+  background: radial-gradient(
+    circle at top left,
+    rgba(24, 24, 30, 1) 0,
+    rgba(5, 5, 5, 1) 100%
+  );
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }

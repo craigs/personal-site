@@ -5,6 +5,11 @@
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 300px);
 
+  & p {
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
+
   @include mobile {
     display: block;
 
@@ -13,4 +18,8 @@
       margin-bottom: 3rem;
     }
   }
+}
+
+.cover {
+  border-radius: 5px;
 }

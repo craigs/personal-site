@@ -1,18 +1,34 @@
+@import '../../styles/mixins/breakpoints.scss';
+
 .container {
   min-height: 100vh;
-  max-width: 600px;
+  max-width: 800px;
 
   & li,
   & p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
   }
 
+  & h2 {
+    margin-top: 3rem;
+  }
+}
+
+.content {
+  padding: 0 5rem 0 3rem;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.heading {
   & h1 {
     font-size: 3rem;
-    line-height: 3.5rem;
+    line-height: 3.2rem;
     margin-bottom: 2rem;
-    max-width: 500px;
+    max-width: 800px;
     margin-top: 1rem;
   }
 }

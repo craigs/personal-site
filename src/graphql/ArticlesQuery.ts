@@ -5,7 +5,15 @@ export const ArticlesQuery = gql`
     articles(where: { category: $category }, orderBy: createdAt_DESC) {
       id
       slug
+      teaser
       title
+      coverImage {
+        image {
+          handle
+          height
+          width
+        }
+      }
     }
   }
 `

@@ -7,8 +7,17 @@ export const HomeQuery = gql`
       first: 10
       orderBy: createdAt_DESC
     ) {
+      coverImage {
+        credit
+        image {
+          handle
+          height
+          width
+        }
+      }
       id
       slug
+      teaser
       title
     }
 
