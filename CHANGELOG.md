@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/craigs/personal-site/compare/v1.13.2...v1.14.0) (2020-10-07)
+
+
+### Features
+
+* enable strict mode ([fbddb16](https://github.com/craigs/personal-site/commit/fbddb161fdbe17c0ea2e423c26fa73822b0f2e27))
+
 ### [1.13.2](https://github.com/craigs/personal-site/compare/v1.13.1...v1.13.2) (2020-10-07)
 
 ### [1.13.1](https://github.com/craigs/personal-site/compare/v1.13.0...v1.13.1) (2020-08-12)
