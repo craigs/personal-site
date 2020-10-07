@@ -1,8 +1,9 @@
+import { IncomingMessage } from 'http'
 import { GetServerSideProps } from 'next'
 import { FC, ReactNode } from 'react'
 import { getUri } from '~lib/getUri'
 
-const generateSitemap = (req: any) => {
+const generateSitemap = (req: IncomingMessage) => {
   const uri = getUri(req)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

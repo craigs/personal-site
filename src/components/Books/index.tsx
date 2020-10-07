@@ -10,7 +10,7 @@ interface IBooksProps {
 
 export const Books: FC<IBooksProps> = ({ collection }) => (
   <div className={Styles.books}>
-    {collection.map((book: any) => (
+    {collection.map((book: IBook) => (
       <Book key={book.id} {...book} />
     ))}
   </div>
