@@ -1,4 +1,6 @@
-export default [
+import { ILink } from './ILink'
+
+const links: ILink[] = [
   {
     as: '/articles',
     href: '/articles',
@@ -25,3 +27,5 @@ export default [
     name: 'Podcasts'
   }
 ]
+
+export default links

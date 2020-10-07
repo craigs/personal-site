@@ -20,8 +20,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint . --ext .ts,.tsx --config .eslintrc.json",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix --config .eslintrc.json",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "test": "jest --colors",
     "test:watch": "jest --colors --watch"

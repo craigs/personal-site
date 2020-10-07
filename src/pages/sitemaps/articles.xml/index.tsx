@@ -36,7 +36,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   res.write(generate(req, articles))
   res.end()
 
-  return null
+  return {
+    props: {}
+  }
 }
 
 const Page: FC<ReactNode> = () => null

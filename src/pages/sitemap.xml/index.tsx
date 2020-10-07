@@ -20,12 +20,14 @@ const generateSitemap = (req: IncomingMessage) => {
   return sitemap
 }
 
-export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   res.setHeader('Content-Type', 'text/xml')
   res.write(generateSitemap(req))
   res.end()
 
-  return null
+  return {
+    props: {}
+  }
 }
 
 const Page: FC<ReactNode> = () => null
