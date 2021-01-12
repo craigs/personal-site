@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import { Books, Layout } from '~components/index'
-import { BooksQuery } from '~graphql/BooksQuery'
+import { BooksQuery } from '~graphql'
 import { Api } from '~lib/Api'
 import { IBook } from '~typings/IBook'
 

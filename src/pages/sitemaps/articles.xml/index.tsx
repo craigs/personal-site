@@ -1,7 +1,7 @@
 import { IncomingMessage } from 'http'
 import { GetServerSideProps } from 'next'
 import { FC, ReactNode } from 'react'
-import { ArticlesQuery } from '~graphql/ArticlesQuery'
+import { ArticlesQuery } from '~graphql'
 import { Api } from '~lib/Api'
 import { getUri } from '~lib/getUri'
 import { IArticle } from '~typings/IArticle'

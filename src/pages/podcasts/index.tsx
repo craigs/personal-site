@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import { IPodcast } from '~typings/IPodcast'
 import { Layout, Podcasts } from '~components/index'
-import { PodcastsQuery } from '~graphql/PodcastsQuery'
+import { PodcastsQuery } from '~graphql'
 import { Api } from '~lib/Api'
 
 interface IServerSideProps {

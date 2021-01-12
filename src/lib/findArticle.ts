@@ -1,4 +1,4 @@
-import { ArticleQuery } from '~graphql/ArticleQuery'
+import { ArticleQuery } from '~graphql'
 import { Api } from './Api'
 import { IArticle } from '~typings/IArticle'
 

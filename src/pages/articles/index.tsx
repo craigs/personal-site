@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import { NextPage } from 'next'
 import { Articles, Layout } from '~components/index'
-import { ArticlesQuery } from '~graphql/ArticlesQuery'
+import { ArticlesQuery } from '~graphql'
 import { Api } from '~lib/Api'
 import { IArticle } from '~typings/IArticle'
 

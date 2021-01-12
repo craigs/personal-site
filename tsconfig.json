@@ -17,7 +17,7 @@
     "downlevelIteration": true,
     "paths": {
       "~components/*": ["src/components/*"],
-      "~graphql/*": ["src/graphql/*"],
+      "~graphql": ["src/graphql/index"],
       "~lib/*": ["src/lib/*"],
       "~typings/*": ["src/typings/*"]
     }

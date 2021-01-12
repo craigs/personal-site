@@ -8,7 +8,7 @@ import {
   Layout,
   Podcasts
 } from '~components/index'
-import { HomeQuery } from '~graphql/HomeQuery'
+import { HomeQuery } from '~graphql'
 import { Api } from '~lib/Api'
 import { IArticle } from '~typings/IArticle'
 import { IBook } from '~typings/IBook'
