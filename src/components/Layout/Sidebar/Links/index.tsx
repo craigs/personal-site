@@ -1,4 +1,4 @@
-import classNames from 'classnames/bind'
+import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { FC, ReactNode } from 'react'
@@ -7,7 +7,6 @@ import links from './links'
 import { ILink } from './ILink'
 
 import Styles from './index.module.scss'
-const css = classNames.bind(Styles)
 
 const Links: FC<ReactNode> = () => {
   const { asPath } = useRouter()
@@ -18,7 +17,7 @@ const Links: FC<ReactNode> = () => {
 
     return (
       <Link href={href} as={as}>
-        <a className={css({ active })}>
+        <a className={clsx({ [Styles.active]: active })}>
           {active && <Dot />}
           {name}
         </a>

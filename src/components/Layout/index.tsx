@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { FC, ReactNode, useState } from 'react'
-import { Swipeable } from 'react-swipeable'
+import { useSwipeable } from 'react-swipeable'
 import Favicon from './Favicon'
 import Sidebar from './Sidebar'
 
@@ -9,12 +9,12 @@ import Styles from './index.module.scss'
 export const Layout: FC<ReactNode> = ({ children }) => {
   const [open, setOpen] = useState(false)
 
-  const config = {
+  const handlers = useSwipeable({
     onSwipedLeft: () => setOpen(false),
     onSwipedRight: () => setOpen(true),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
-  }
+  })
 
   return (
     <>
@@ -29,7 +29,7 @@ export const Layout: FC<ReactNode> = ({ children }) => {
         <Favicon />
       </Head>
 
-      <Swipeable {...config}>
+      <div {...handlers}>
         <div className={Styles.toggle}>
           <label htmlFor="toggler">
             <img src="/hamburger.svg" />
@@ -50,7 +50,7 @@ export const Layout: FC<ReactNode> = ({ children }) => {
 
           <div className={Styles.content}>{children}</div>
         </div>
-      </Swipeable>
+      </div>
     </>
   )
 }
