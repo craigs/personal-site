@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/craigs/personal-site/compare/v1.17.0...v1.18.0) (2021-03-23)
+
+
+### Features
+
+* gradient font colors ([56a018d](https://github.com/craigs/personal-site/commit/56a018d7469d4fdfcca30151c9ec5c812563797f))
+
 ## [1.17.0](https://github.com/craigs/personal-site/compare/v1.16.0...v1.17.0) (2021-03-23)
 
 
