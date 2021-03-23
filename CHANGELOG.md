@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/craigs/personal-site/compare/v1.18.0...v1.19.0) (2021-03-23)
+
+
+### Features
+
+* updated colour scheme ([928e0b2](https://github.com/craigs/personal-site/commit/928e0b20f0e1c56f4e644bc9c4fc514e7cbea3a1))
+
 ## [1.18.0](https://github.com/craigs/personal-site/compare/v1.17.0...v1.18.0) (2021-03-23)
 
 
