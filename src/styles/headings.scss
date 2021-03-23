@@ -3,9 +3,17 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 700;
   color: #ffffff;
+  display: inline-block;
+  font-weight: 700;
   margin-bottom: 0;
+}
+
+h1,
+h2 {
+  background: linear-gradient(-30deg, #8e9eab, #eef2f3, #ffffff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1 {
