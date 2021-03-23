@@ -4,16 +4,12 @@ h3,
 h4,
 h5 {
   color: #ffffff;
-  display: inline-block;
   font-weight: 700;
   margin-bottom: 0;
 }
 
 h1,
 h2 {
-  background: linear-gradient(-30deg, #8e9eab, #eef2f3, #ffffff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 h1 {
@@ -29,11 +25,12 @@ h1 {
 h2 {
   font-size: 2rem;
   line-height: 2.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   font-size: 1.2rem;
+  margin-top: 2rem;
 }
 
 h4 {
