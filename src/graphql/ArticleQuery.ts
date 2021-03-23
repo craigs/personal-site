@@ -11,7 +11,6 @@ export const ArticleQuery = gql`
           width
         }
       }
-      body
       contents {
         id
         title
