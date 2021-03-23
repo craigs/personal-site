@@ -1,28 +1,28 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { IPodcast } from '~typings/IPodcast'
-import { Layout, Podcasts } from '~components/index'
+import { Podcast } from '~typings'
+import { Layout, Podcasts } from '~components'
 import { PodcastsQuery } from '~graphql'
 import { Api } from '~lib/Api'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    podcasts: IPodcast[]
+    podcasts: Podcast[]
   }
 }
 
-export const getServerSideProps = async (): Promise<IServerSideProps> => {
+export const getServerSideProps = async (): Promise<ServerSideProps> => {
   const { data } = await Api.query({ query: PodcastsQuery })
 
   return { props: { ...data } }
 }
 
-interface IPageProps {
-  podcasts: IPodcast[]
+interface PageProps {
+  podcasts: Podcast[]
 }
 
-const Page: NextPage<IPageProps> = ({ podcasts }) => (
+const Page: NextPage<PageProps> = ({ podcasts }) => (
   <Layout>
     <Head>
       <title>Podcasts</title>

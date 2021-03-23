@@ -1,6 +1,6 @@
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
-export const NotFound: IArticle = {
+export const NotFound: Article = {
   id: '0',
   slug: '/',
   teaser: 'The article you were looking for was not found',

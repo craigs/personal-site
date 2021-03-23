@@ -1,6 +1,6 @@
-import { ILink } from './ILink'
+import { Link } from './Link'
 
-const links: ILink[] = [
+const links: Link[] = [
   {
     as: '/articles',
     href: '/articles',

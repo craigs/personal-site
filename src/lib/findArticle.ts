@@ -1,10 +1,10 @@
 import { ArticleQuery } from '~graphql'
 import { Api } from './Api'
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
 export const findArticle = async (
   slug: string | string[]
-): Promise<IArticle> => {
+): Promise<Article> => {
   const { data } = await Api.query({
     query: ArticleQuery,
     variables: { slug }

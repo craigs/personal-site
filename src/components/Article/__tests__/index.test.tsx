@@ -2,7 +2,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import TestRenderer from 'react-test-renderer'
 import article from '../../../fixtures/article'
-import { Article } from '../../index'
+import { Article } from '../..'
 
 it('renders an article', () => {
   const renderer = TestRenderer.create(<Article article={article} />)

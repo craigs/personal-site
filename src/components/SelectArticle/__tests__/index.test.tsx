@@ -1,7 +1,7 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import { Article } from '../../index'
-import { SelectArticle } from '../index'
+import { Article } from '../..'
+import { SelectArticle } from '..'
 
 import article from '../../../fixtures/article'
 

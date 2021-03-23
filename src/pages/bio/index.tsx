@@ -1,25 +1,25 @@
 import React from 'react'
 import { NextPage } from 'next'
-import { SelectArticle } from '~components/index'
+import { SelectArticle } from '~components'
 import { findArticle } from '~lib/findArticle'
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    article: IArticle
+    article: Article
   }
 }
 
-export const getServerSideProps = async (): Promise<IServerSideProps> => {
+export const getServerSideProps = async (): Promise<ServerSideProps> => {
   const article = await findArticle('bio')
   return { props: { article } }
 }
 
-interface IPageProps {
-  article: IArticle
+interface PageProps {
+  article: Article
 }
 
-const Page: NextPage<IPageProps> = ({ article }) => (
+const Page: NextPage<PageProps> = ({ article }) => (
   <SelectArticle article={article} />
 )
 

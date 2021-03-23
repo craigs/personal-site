@@ -1,15 +1,15 @@
 import React, { FC } from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
-import { IArticle } from '~typings/IArticle'
+import { Article as ArticleInterface } from '~typings'
 import { ContentImage } from './ContentImage'
 import { Cover } from './Cover'
 import Styles from './index.module.scss'
 
-interface IArticleProps {
-  article: IArticle
+interface Props {
+  article: ArticleInterface
 }
 
-export const Article: FC<IArticleProps> = ({ article }) => {
+export const Article: FC<Props> = ({ article }) => {
   const { title, contents, coverImage } = article
 
   return (

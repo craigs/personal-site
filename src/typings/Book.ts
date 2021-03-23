@@ -1,9 +1,9 @@
-import { IImage } from './IImage'
+import { Image } from './Image'
 
-export interface IBook {
+export interface Book {
   id: number
   link: string
-  image: IImage
+  image: Image
   title: string
   subtitle: string
   author: string

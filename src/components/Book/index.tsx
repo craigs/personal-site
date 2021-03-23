@@ -1,10 +1,16 @@
 import React, { FC } from 'react'
 import GraphImg from 'graphcms-image'
-import { IBook } from '~typings/IBook'
+import { Book as BookInterface } from '~typings'
 
 import Styles from './index.module.scss'
 
-export const Book: FC<IBook> = ({ link, image, title, subtitle, author }) => (
+export const Book: FC<BookInterface> = ({
+  author,
+  image,
+  link,
+  subtitle,
+  title
+}) => (
   <div className={Styles.book}>
     <a href={link} className={Styles.link}>
       <GraphImg

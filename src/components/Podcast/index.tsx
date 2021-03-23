@@ -1,10 +1,15 @@
 import React, { FC } from 'react'
 import GraphImg from 'graphcms-image'
-import { IPodcast } from '~typings/IPodcast'
+import { Podcast as PodcastInterface } from '~typings'
 
 import Styles from './index.module.scss'
 
-export const Podcast: FC<IPodcast> = ({ link, image, title, author }) => (
+export const Podcast: FC<PodcastInterface> = ({
+  link,
+  image,
+  title,
+  author
+}) => (
   <a href={link} className={Styles.podcast}>
     <GraphImg
       backgroundColor={false}

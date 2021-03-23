@@ -1,6 +1,6 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import { ButtonLink } from '../../index'
+import { ButtonLink } from '../..'
 
 it('renders a button link', () => {
   const renderer = TestRenderer.create(

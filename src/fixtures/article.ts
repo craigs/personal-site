@@ -1,6 +1,6 @@
-import { IArticle } from '~typings/IArticle'
+import { Article as ArticleInterface } from '~typings'
 
-const Article: IArticle = {
+const Article: ArticleInterface = {
   id: '1',
   slug: 'my-article',
   title: 'My article',

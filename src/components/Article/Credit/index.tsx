@@ -1,21 +1,12 @@
 import React, { FC } from 'react'
 
 import Styles from './index.module.scss'
-
-interface IImage {
-  credit?: string
-  image: {
-    height: number
-    width: number
-    handle: string
-  }
+import { ContentImage } from '~typings'
+interface Props {
+  contentImage: ContentImage
 }
 
-interface ICreditProps {
-  contentImage: IImage
-}
-
-export const Credit: FC<ICreditProps> = ({ contentImage: { credit } }) => {
+export const Credit: FC<Props> = ({ contentImage: { credit } }) => {
   if (!credit) return null
 
   return (

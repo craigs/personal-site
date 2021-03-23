@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
-import { IPodcast } from '~typings/IPodcast'
+import { Podcast as PodcastInterface } from '~typings'
 import { Podcast } from '../Podcast'
 
 import Styles from './index.module.scss'
 
-interface IPodcastsProps {
-  collection: IPodcast[]
+interface PodcastsProps {
+  collection: PodcastInterface[]
 }
 
-export const Podcasts: FC<IPodcastsProps> = ({ collection }) => (
+export const Podcasts: FC<PodcastsProps> = ({ collection }) => (
   <div className={Styles.podcasts}>
     {collection.map(podcast => (
       <Podcast key={podcast.id} {...podcast} />

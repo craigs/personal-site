@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import React from 'react'
 import { NextPage } from 'next'
-import { Articles, Layout } from '~components/index'
+import { Articles, Layout } from '~components'
 import { ArticlesQuery } from '~graphql'
 import { Api } from '~lib/Api'
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    articles: IArticle[]
+    articles: Article[]
   }
 }
 
-export const getServerSideProps = async (): Promise<IServerSideProps> => {
+export const getServerSideProps = async (): Promise<ServerSideProps> => {
   const category = 'article'
 
   const { data } = await Api.query({
@@ -23,11 +23,11 @@ export const getServerSideProps = async (): Promise<IServerSideProps> => {
   return { props: { ...data } }
 }
 
-interface IPageProps {
-  articles: IArticle[]
+interface PageProps {
+  articles: Article[]
 }
 
-const Page: NextPage<IPageProps> = ({ articles }) => (
+const Page: NextPage<PageProps> = ({ articles }) => (
   <Layout>
     <Head>
       <title>Articles</title>

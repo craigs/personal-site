@@ -4,14 +4,14 @@ import { useRouter } from 'next/router'
 import React, { FC, ReactNode } from 'react'
 import { Dot } from './Dot'
 import links from './links'
-import { ILink } from './ILink'
+import { Link as LinkInterface } from './Link'
 
 import Styles from './index.module.scss'
 
 const Links: FC<ReactNode> = () => {
   const { asPath } = useRouter()
 
-  const renderLink = (link: ILink) => {
+  const renderLink = (link: LinkInterface) => {
     const { href, as, name } = link
     const active = asPath.startsWith(as)
 

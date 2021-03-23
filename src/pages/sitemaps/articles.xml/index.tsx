@@ -4,12 +4,9 @@ import { FC, ReactNode } from 'react'
 import { ArticlesQuery } from '~graphql'
 import { Api } from '~lib/Api'
 import { getUri } from '~lib/getUri'
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
-export const generate = (
-  req: IncomingMessage,
-  articles: IArticle[]
-): string => {
+export const generate = (req: IncomingMessage, articles: Article[]): string => {
   const uri = getUri(req)
 
   const urls = articles.map(

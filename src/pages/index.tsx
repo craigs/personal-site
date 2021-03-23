@@ -1,41 +1,33 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import {
-  Articles,
-  Books,
-  ButtonLink,
-  Layout,
-  Podcasts
-} from '~components/index'
+import { Articles, Books, ButtonLink, Layout, Podcasts } from '~components'
 import { HomeQuery } from '~graphql'
 import { Api } from '~lib/Api'
-import { IArticle } from '~typings/IArticle'
-import { IBook } from '~typings/IBook'
-import { IPodcast } from '~typings/IPodcast'
+import { Article, Book, Podcast } from '~typings'
 
 import Styles from './index.module.scss'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    articles: IArticle[]
-    books: IBook[]
-    podcasts: IPodcast[]
+    articles: Article[]
+    books: Book[]
+    podcasts: Podcast[]
   }
 }
 
-interface IPageProps {
-  articles: IArticle[]
-  books: IBook[]
-  podcasts: IPodcast[]
+interface PageProps {
+  articles: Article[]
+  books: Book[]
+  podcasts: Podcast[]
 }
 
-export const getServerSideProps = async (): Promise<IServerSideProps> => {
+export const getServerSideProps = async (): Promise<ServerSideProps> => {
   const { data } = await Api.query({ query: HomeQuery })
   return { props: { ...data } }
 }
 
-const Page: NextPage<IPageProps> = ({ articles, books, podcasts }) => (
+const Page: NextPage<PageProps> = ({ articles, books, podcasts }) => (
   <Layout>
     <Head>
       <title>craigs.io - welcome</title>

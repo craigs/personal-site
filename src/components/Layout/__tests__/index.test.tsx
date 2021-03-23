@@ -1,6 +1,6 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import { Layout } from '../../index'
+import { Layout } from '../..'
 import Sidebar from '../Sidebar'
 
 const useRouter = {

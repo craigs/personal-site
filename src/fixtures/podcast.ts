@@ -1,6 +1,6 @@
-import { IPodcast } from '~typings/IPodcast'
+import { Podcast as PodcastInterface } from '~typings'
 
-const Podcast: IPodcast = {
+const Podcast: PodcastInterface = {
   author: 'Craig',
   id: 1,
   image: {

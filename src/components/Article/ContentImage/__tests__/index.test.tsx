@@ -1,7 +1,7 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import contentImage from '../../../../fixtures/contentImage'
-import { ContentImage } from '../index'
+import { ContentImage } from '..'
 
 it('renders a ContentImage', () => {
   const renderer = TestRenderer.create(

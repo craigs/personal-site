@@ -1,6 +1,6 @@
-import { IBook } from '~typings/IBook'
+import { Book as BookInterface } from '~typings'
 
-const Book: IBook = {
+const Book: BookInterface = {
   author: 'Craig',
   id: 1,
   image: {

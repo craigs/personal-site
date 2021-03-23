@@ -1,28 +1,28 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { Books, Layout } from '~components/index'
+import { Books, Layout } from '~components'
 import { BooksQuery } from '~graphql'
 import { Api } from '~lib/Api'
-import { IBook } from '~typings/IBook'
+import { Book } from '~typings'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    books: IBook[]
+    books: Book[]
   }
 }
 
-export const getServerSideProps = async (): Promise<IServerSideProps> => {
+export const getServerSideProps = async (): Promise<ServerSideProps> => {
   const { data } = await Api.query({ query: BooksQuery })
 
   return { props: { ...data } }
 }
 
-interface IPageProps {
-  books: IBook[]
+interface PageProps {
+  books: Book[]
 }
 
-const Page: NextPage<IPageProps> = ({ books }) => (
+const Page: NextPage<PageProps> = ({ books }) => (
   <Layout>
     <Head>
       <title>Books, Audiobooks</title>

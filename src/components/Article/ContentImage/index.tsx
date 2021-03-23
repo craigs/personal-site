@@ -1,15 +1,15 @@
 import GraphImg from 'graphcms-image'
 import React, { FC } from 'react'
-import { IContentImage } from '~typings/IContentImage'
+import { ContentImage as ContentImageInterface } from '~typings'
 import { Credit } from '../Credit'
 
 import Styles from './index.module.scss'
 
-interface IContentImageProps {
-  contentImage: IContentImage
+interface Props {
+  contentImage: ContentImageInterface
 }
 
-export const ContentImage: FC<IContentImageProps> = ({ contentImage }) => {
+export const ContentImage: FC<Props> = ({ contentImage }) => {
   const { image } = contentImage
 
   if (!image) return null

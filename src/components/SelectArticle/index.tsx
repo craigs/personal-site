@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import React, { FC } from 'react'
-import { Article, Layout } from '~components/index'
+import { Article, Layout } from '~components'
 import { NotFound } from '~lib/NotFound'
-import { IArticle } from '~typings/IArticle'
+import { Article as ArticleInterface } from '~typings'
 
-interface ISelectArticleProps {
-  article: IArticle
+interface SelectArticleProps {
+  article: ArticleInterface
 }
 
-export const SelectArticle: FC<ISelectArticleProps> = props => {
+export const SelectArticle: FC<SelectArticleProps> = props => {
   const { article } = props
   const selected = article || NotFound
   const { title, teaser } = selected

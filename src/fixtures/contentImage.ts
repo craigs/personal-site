@@ -1,6 +1,6 @@
-import { IContentImage } from '~typings/IContentImage'
+import { ContentImage as ContentImageInterface } from '~typings'
 
-const ContentImage: IContentImage = {
+const ContentImage: ContentImageInterface = {
   credit: 'Photo by me',
   image: {
     handle: 'p42MReZnTieJ9KFUGtni',

@@ -1,16 +1,16 @@
 import React from 'react'
 import { NextPage } from 'next'
-import { SelectArticle } from '~components/index'
+import { SelectArticle } from '~components'
 import { findArticle } from '~lib/findArticle'
-import { IArticle } from '~typings/IArticle'
+import { Article } from '~typings'
 
-interface IServerSideProps {
+interface ServerSideProps {
   props: {
-    article: IArticle
+    article: Article
   }
 }
 
-interface IProps {
+interface Props {
   query: {
     slug: string
   }
@@ -18,17 +18,17 @@ interface IProps {
 
 export const getServerSideProps = async ({
   query: { slug }
-}: IProps): Promise<IServerSideProps> => {
+}: Props): Promise<ServerSideProps> => {
   const article = await findArticle(slug)
 
   return { props: { article } }
 }
 
-interface IPageProps {
-  article: IArticle
+interface PageProps {
+  article: Article
 }
 
-const Page: NextPage<IPageProps> = ({ article }) => (
+const Page: NextPage<PageProps> = ({ article }) => (
   <SelectArticle article={article} />
 )
 

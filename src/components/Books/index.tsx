@@ -1,16 +1,16 @@
 import React, { FC } from 'react'
-import { IBook } from '~typings/IBook'
+import { Book as BookInterface } from '~typings'
 import { Book } from '../Book'
 
 import Styles from './index.module.scss'
 
-interface IBooksProps {
-  collection: IBook[]
+interface Props {
+  collection: BookInterface[]
 }
 
-export const Books: FC<IBooksProps> = ({ collection }) => (
+export const Books: FC<Props> = ({ collection }) => (
   <div className={Styles.books}>
-    {collection.map((book: IBook) => (
+    {collection.map((book: BookInterface) => (
       <Book key={book.id} {...book} />
     ))}
   </div>

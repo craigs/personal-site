@@ -16,10 +16,10 @@
     "baseUrl": ".",
     "downlevelIteration": true,
     "paths": {
-      "~components/*": ["src/components/*"],
+      "~components": ["src/components"],
       "~graphql": ["src/graphql/index"],
       "~lib/*": ["src/lib/*"],
-      "~typings/*": ["src/typings/*"]
+      "~typings": ["src/typings"]
     }
   },
   "exclude": ["node_modules", ".next", "out", "cypress"],
