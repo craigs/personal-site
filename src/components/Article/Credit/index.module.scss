@@ -1,7 +1,7 @@
 @import '../../../styles/mixins/breakpoints.scss';
 
 .container {
-  color: #7d95bd;
+  color: var(--color-grey70);
   font-size: 0.9rem;
   margin-left: 3rem;
   margin-top: 1rem;

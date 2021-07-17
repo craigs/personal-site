@@ -9,8 +9,6 @@
 }
 
 .sidebar {
-  color: #999999;
-
   & a {
     display: block;
     text-decoration: none;
@@ -18,7 +16,7 @@
 
     &:hover {
       box-shadow: none;
-      color: #ffffff;
+      color: var(--color-white);
     }
   }
 }
