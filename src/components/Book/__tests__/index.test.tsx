@@ -1,11 +1,10 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import book from '../../../fixtures/book'
 import { Book } from '../..'
 
 it('renders a book', () => {
-  const renderer = TestRenderer.create(<Book {...book} />)
-  const { root } = renderer
+  const { getByText } = render(<Book {...book} />)
 
-  expect(root).not.toBeNull()
+  expect(getByText(book.title)).toBeDefined()
 })

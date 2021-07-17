@@ -7,5 +7,5 @@ export interface Article {
   slug: string
   teaser?: string
   title: string
-  contents: [Content]
+  contents: Content[]
 }

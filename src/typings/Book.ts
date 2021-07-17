@@ -1,10 +1,10 @@
 import { Image } from './Image'
 
 export interface Book {
-  id: number
+  id: string
   link: string
   image: Image
   title: string
-  subtitle: string
+  subtitle?: string
   author: string
 }

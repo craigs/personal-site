@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import article from '../../../fixtures/article'
 import { Article } from '../..'
 
 it('renders an article', () => {
-  const renderer = TestRenderer.create(<Article article={article} />)
-  const { root } = renderer
+  const { getByText } = render(<Article article={article} />)
 
-  expect(root).not.toBeNull()
-  expect(root.findByType(ReactMarkdown)).not.toBeNull()
+  expect(getByText(article.title)).toBeDefined()
 })

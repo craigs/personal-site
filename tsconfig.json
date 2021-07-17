@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,12 +20,29 @@
     "baseUrl": ".",
     "downlevelIteration": true,
     "paths": {
-      "~components": ["src/components"],
-      "~graphql": ["src/graphql/index"],
-      "~lib/*": ["src/lib/*"],
-      "~typings": ["src/typings"]
+      "~components": [
+        "src/components"
+      ],
+      "~graphql": [
+        "src/graphql/index"
+      ],
+      "~lib/*": [
+        "src/lib/*"
+      ],
+      "~typings": [
+        "src/typings"
+      ]
     }
   },
-  "exclude": ["node_modules", ".next", "out", "cypress"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "cypress"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import article from '../../../fixtures/article'
 import { Articles } from '../..'
 
 it('renders a collection of articles', () => {
-  const renderer = TestRenderer.create(<Articles collection={[article]} />)
-  const { root } = renderer
+  const { getByText } = render(<Articles collection={[article]} />)
 
-  expect(root.findByType(Link)).not.toBeNull()
+  expect(getByText(article.title)).toBeDefined()
 })

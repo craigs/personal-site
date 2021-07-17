@@ -5,7 +5,7 @@ import Social from './Social'
 import Styles from './index.module.scss'
 
 const Sidebar: FC<ReactNode> = () => (
-  <div className={Styles.sidebar}>
+  <div className={Styles.sidebar} data-testid="sidebar">
     <div className={Styles.home}>
       <a href="/">
         <img src="/logos/craigs.svg" />

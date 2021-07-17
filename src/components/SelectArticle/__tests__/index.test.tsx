@@ -1,21 +1,11 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
-import { Article } from '../..'
-import { SelectArticle } from '..'
+import { render } from '@testing-library/react'
 
 import article from '../../../fixtures/article'
-
-const useRouter = {
-  asPath: {
-    startsWith: () => false
-  }
-}
-
-jest.mock('next/router', () => ({ useRouter: () => useRouter }))
+import { SelectArticle } from '..'
 
 it('renders an article', async () => {
-  const renderer = TestRenderer.create(<SelectArticle article={article} />)
-  const { root } = renderer
+  const { getByText } = render(<SelectArticle article={article} />)
 
-  expect(root.findByType(Article)).not.toBeNull()
+  expect(getByText(article.title)).toBeDefined()
 })

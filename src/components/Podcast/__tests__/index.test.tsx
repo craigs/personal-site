@@ -1,11 +1,10 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import podcast from '../../../fixtures/podcast'
 import { Podcast } from '../..'
 
 it('renders a podcast', () => {
-  const renderer = TestRenderer.create(<Podcast {...podcast} />)
-  const { root } = renderer
+  const {getByText} = render(<Podcast {...podcast} />)
 
-  expect(root).not.toBeNull()
+  expect(getByText(podcast.title)).toBeDefined()
 })

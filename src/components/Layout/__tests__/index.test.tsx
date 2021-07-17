@@ -1,24 +1,16 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
 import { Layout } from '../..'
-import Sidebar from '../Sidebar'
 
-const useRouter = {
-  asPath: {
-    startsWith: () => false
-  }
-}
+it('renders the sidebar', () => {
+  const text = 'sample content'
 
-jest.mock('next/router', () => ({ useRouter: () => useRouter }))
-
-it('renders a book', () => {
-  const renderer = TestRenderer.create(
+  const { getByTestId, getByText } = render(
     <Layout>
-      <p>sample content</p>
+      <p>{text}</p>
     </Layout>
   )
-  const { root } = renderer
 
-  expect(root).not.toBeNull()
-  expect(root.findByType(Sidebar)).not.toBeNull()
+  expect(getByTestId('sidebar')).toBeDefined()
+  expect(getByText(text)).toBeDefined()
 })

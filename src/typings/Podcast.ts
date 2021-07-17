@@ -1,7 +1,7 @@
 import { Image } from './Image'
 
 export interface Podcast {
-  id: number
+  id: string
   link: string
   image: Image
   title: string

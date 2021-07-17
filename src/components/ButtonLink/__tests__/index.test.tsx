@@ -1,12 +1,12 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
+
 import { ButtonLink } from '../..'
 
 it('renders a button link', () => {
-  const renderer = TestRenderer.create(
+  const { getByText } = render(
     <ButtonLink as="/podcasts" label="podcasts" link="/podcasts" />
   )
-  const { root } = renderer
 
-  expect(root).not.toBeNull()
+  expect(getByText('podcasts')).toBeDefined()
 })

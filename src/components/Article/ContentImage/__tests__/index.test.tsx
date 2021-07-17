@@ -1,14 +1,12 @@
 import React from 'react'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import contentImage from '../../../../fixtures/contentImage'
 import { ContentImage } from '..'
 
 it('renders a ContentImage', () => {
-  const renderer = TestRenderer.create(
+  const { getByRole } = render(
     <ContentImage contentImage={contentImage} />
   )
-  const { root } = renderer
 
-  expect(root).not.toBeNull()
-  expect(root.findByType('img')).not.toBeNull()
+  expect(getByRole('img')).toBeDefined()
 })

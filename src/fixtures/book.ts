@@ -4,7 +4,9 @@ const Book: BookInterface = {
   author: 'Craig',
   id: 1,
   image: {
-    handle: 'cover-image',
+    url: 'cover-image',
+    thumbnail: 'cover-image',
+    blur: 'cover-image',
     height: 30,
     width: 30
   },

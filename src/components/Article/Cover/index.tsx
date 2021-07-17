@@ -14,7 +14,7 @@ export const Cover: FC<Props> = ({ contentImage }) => {
   const { image } = contentImage
 
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} data-testid="cover">
       <Image
         blurDataURL={image.blur}
         className={Styles.cover}

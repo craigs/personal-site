@@ -3,7 +3,9 @@ import { ContentImage as ContentImageInterface } from '~typings'
 const ContentImage: ContentImageInterface = {
   credit: 'Photo by me',
   image: {
-    handle: 'p42MReZnTieJ9KFUGtni',
+    url: 'https://media.graphcms.com/resize=w:170,fit:scale/compress/p5lB3tQlQX2hDsjvRQQ8',
+    thumbnail: 'https://media.graphcms.com/resize=w:170,fit:scale/compress/p5lB3tQlQX2hDsjvRQQ8',
+    blur: 'https://media.graphcms.com/resize=w:170,fit:scale/compress/p5lB3tQlQX2hDsjvRQQ8',
     height: 933,
     width: 1400
   }
