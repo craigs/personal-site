@@ -27,7 +27,9 @@ const Links: FC<ReactNode> = () => {
 
   return (
     <div className={Styles.links}>
-      {links.map(link => <div key={link.as}>{render(link)}</div>)}
+      {links.map(link => (
+        <div key={link.as}>{render(link)}</div>
+      ))}
     </div>
   )
 }

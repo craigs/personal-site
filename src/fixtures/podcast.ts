@@ -2,7 +2,7 @@ import { Podcast as PodcastInterface } from '~typings'
 
 const Podcast: PodcastInterface = {
   author: 'Craig',
-  id: 1,
+  id: '1',
   image: {
     blur: 'cover-image',
     height: 30,

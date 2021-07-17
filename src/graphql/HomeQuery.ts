@@ -13,9 +13,7 @@ export const HomeQuery = gql`
           height
           blur: url(
             transformation: {
-              image: {
-                resize: { width: 10, fit: scale }
-              }
+              image: { resize: { width: 10, fit: scale } }
               document: { output: { format: webp } }
             }
           )
@@ -25,11 +23,7 @@ export const HomeQuery = gql`
               document: { output: { format: webp } }
             }
           )
-          url(
-            transformation: {
-              document: { output: { format: webp } }
-            }
-          )
+          url(transformation: { document: { output: { format: webp } } })
           width
         }
       }
@@ -45,9 +39,7 @@ export const HomeQuery = gql`
       image {
         blur: url(
           transformation: {
-            image: {
-              resize: { width: 10, fit: scale }
-            }
+            image: { resize: { width: 10, fit: scale } }
             document: { output: { format: webp } }
           }
         )
@@ -57,11 +49,7 @@ export const HomeQuery = gql`
             document: { output: { format: webp } }
           }
         )
-        url(
-          transformation: {
-            document: { output: { format: webp } }
-          }
-        )
+        url(transformation: { document: { output: { format: webp } } })
         height
         width
       }
@@ -76,9 +64,7 @@ export const HomeQuery = gql`
       image {
         blur: url(
           transformation: {
-            image: {
-              resize: { width: 10, fit: scale }
-            }
+            image: { resize: { width: 10, fit: scale } }
             document: { output: { format: webp } }
           }
         )
@@ -88,11 +74,7 @@ export const HomeQuery = gql`
             document: { output: { format: webp } }
           }
         )
-        url(
-          transformation: {
-            document: { output: { format: webp } }
-          }
-        )
+        url(transformation: { document: { output: { format: webp } } })
         height
         width
       }

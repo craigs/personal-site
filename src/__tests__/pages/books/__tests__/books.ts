@@ -21,7 +21,7 @@ export default [
       height: 300,
       thumbnail: 'https://media.graphcms.com/CifESP8gRUOwEuS0XWyH',
       url: 'https://media.graphcms.com/CifESP8gRUOwEuS0XWyH',
-      width: 300,
+      width: 300
     },
     link: 'https://amzn.to/2NST4Uk',
     subtitle: 'The Science and Art of Receiving Feedback Well',

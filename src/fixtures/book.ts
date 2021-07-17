@@ -2,7 +2,7 @@ import { Book as BookInterface } from '~typings'
 
 const Book: BookInterface = {
   author: 'Craig',
-  id: 1,
+  id: '1',
   image: {
     url: 'cover-image',
     thumbnail: 'cover-image',

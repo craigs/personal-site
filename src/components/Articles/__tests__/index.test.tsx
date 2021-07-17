@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import React from 'react'
 import { render } from '@testing-library/react'
+import React from 'react'
+
 import article from '../../../fixtures/article'
 import { Articles } from '../..'
 

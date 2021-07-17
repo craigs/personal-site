@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import { Articles } from '~components'
 
 import Page from '../../../../pages/articles'
 import articles from './articles'

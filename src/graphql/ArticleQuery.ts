@@ -8,17 +8,11 @@ export const ArticleQuery = gql`
         image {
           blur: url(
             transformation: {
-              image: {
-                resize: { width: 10, fit: scale }
-              }
+              image: { resize: { width: 10, fit: scale } }
               document: { output: { format: webp } }
             }
           )
-          url(
-            transformation: {
-              document: { output: { format: webp } }
-            }
-          )
+          url(transformation: { document: { output: { format: webp } } })
           height
           width
         }
@@ -33,17 +27,11 @@ export const ArticleQuery = gql`
             height
             blur: url(
               transformation: {
-                image: {
-                  resize: { width: 10, fit: scale }
-                }
+                image: { resize: { width: 10, fit: scale } }
                 document: { output: { format: webp } }
               }
             )
-            url(
-              transformation: {
-                document: { output: { format: webp } }
-              }
-            )
+            url(transformation: { document: { output: { format: webp } } })
             width
           }
         }

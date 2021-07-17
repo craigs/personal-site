@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import Image from 'next/image'
 import React, { FC } from 'react'
 import { ContentImage as ContentImageInterface } from '~typings'
+
 import { Credit } from '../Credit'
 
 import Styles from './index.module.scss'

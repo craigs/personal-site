@@ -9,9 +9,7 @@ export const BooksQuery = gql`
         height
         blur: url(
           transformation: {
-            image: {
-              resize: { width: 10, fit: scale }
-            }
+            image: { resize: { width: 10, fit: scale } }
             document: { output: { format: webp } }
           }
         )
@@ -21,11 +19,7 @@ export const BooksQuery = gql`
             document: { output: { format: webp } }
           }
         )
-        url(
-          transformation: {
-            document: { output: { format: webp } }
-          }
-        )
+        url(transformation: { document: { output: { format: webp } } })
         width
       }
       link

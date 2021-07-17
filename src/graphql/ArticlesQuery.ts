@@ -12,9 +12,7 @@ export const ArticlesQuery = gql`
           height
           blur: url(
             transformation: {
-              image: {
-                resize: { width: 10, fit: scale }
-              }
+              image: { resize: { width: 10, fit: scale } }
               document: { output: { format: webp } }
             }
           )
@@ -24,11 +22,7 @@ export const ArticlesQuery = gql`
               document: { output: { format: webp } }
             }
           )
-          url(
-            transformation: {
-              document: { output: { format: webp } }
-            }
-          )
+          url(transformation: { document: { output: { format: webp } } })
           width
         }
       }

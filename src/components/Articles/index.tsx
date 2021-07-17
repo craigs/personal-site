@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { FC } from 'react'
 import { Article } from '~typings'
-import Image from 'next/image';
 
 import Styles from './index.module.scss'
 

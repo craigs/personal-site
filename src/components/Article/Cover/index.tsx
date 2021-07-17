@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/image'
 import React, { FC } from 'react'
 import { Credit } from '../Credit'
 import { ContentImage } from '~typings'

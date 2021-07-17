@@ -29,11 +29,12 @@ export const Article: FC<Props> = ({ article }) => {
             {content && (
               <div className={Styles.content}>
                 <ReactMarkdown
-                  children={content}
                   key={`content-${id}`}
                   rehypePlugins={[rehypeRaw]}
                   skipHtml={false}
-                />
+                >
+                  {content}
+                </ReactMarkdown>
               </div>
             )}
           </div>
