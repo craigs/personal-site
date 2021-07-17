@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { FC } from 'react'
 import { Article } from '~typings'
-import GraphImg from 'graphcms-image'
+import Image from 'next/image';
 
 import Styles from './index.module.scss'
 
@@ -16,13 +16,15 @@ export const Articles: FC<Props> = ({ collection }) => (
         <Link href="articles/[slug]" as={`articles/${slug}`}>
           <a>
             {coverImage && (
-              <GraphImg
-                backgroundColor={false}
-                className={Styles.cover}
-                fit="scale"
-                image={coverImage.image}
-                withWebp={true}
-              />
+              <div className={Styles.image}>
+                <Image
+                  placeholder="blur"
+                  blurDataURL={coverImage.image.blur}
+                  src={coverImage.image.thumbnail}
+                  width={coverImage.image.width}
+                  height={coverImage.image.height}
+                />
+              </div>
             )}
 
             <h1>{title}</h1>

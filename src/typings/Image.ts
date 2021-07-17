@@ -1,5 +1,7 @@
 export interface Image {
-  handle: string
+  blur: string
   height: number
+  thumbnail: string
+  url: string
   width: number
 }

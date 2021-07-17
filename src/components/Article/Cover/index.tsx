@@ -1,4 +1,4 @@
-import GraphImg from 'graphcms-image'
+import Image from 'next/image';
 import React, { FC } from 'react'
 import { Credit } from '../Credit'
 import { ContentImage } from '~typings'
@@ -11,16 +11,17 @@ interface Props {
 
 export const Cover: FC<Props> = ({ contentImage }) => {
   if (!contentImage) return null
+  const { image } = contentImage
 
   return (
     <div className={Styles.container}>
-      <GraphImg
-        backgroundColor={false}
+      <Image
+        blurDataURL={image.blur}
         className={Styles.cover}
-        fit="scale"
-        image={contentImage.image}
-        maxHeight={1500}
-        withWebp={true}
+        height={image.height}
+        placeholder="blur"
+        src={image.url}
+        width={image.width}
       />
 
       <Credit contentImage={contentImage} />

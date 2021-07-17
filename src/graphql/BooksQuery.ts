@@ -6,8 +6,26 @@ export const BooksQuery = gql`
       author
       id
       image {
-        handle
         height
+        blur: url(
+          transformation: {
+            image: {
+              resize: { width: 10, fit: scale }
+            }
+            document: { output: { format: webp } }
+          }
+        )
+        thumbnail: url(
+          transformation: {
+            image: { resize: { width: 170, fit: scale } }
+            document: { output: { format: webp } }
+          }
+        )
+        url(
+          transformation: {
+            document: { output: { format: webp } }
+          }
+        )
         width
       }
       link

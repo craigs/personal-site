@@ -6,7 +6,19 @@ export const ArticleQuery = gql`
       coverImage {
         credit
         image {
-          handle
+          blur: url(
+            transformation: {
+              image: {
+                resize: { width: 10, fit: scale }
+              }
+              document: { output: { format: webp } }
+            }
+          )
+          url(
+            transformation: {
+              document: { output: { format: webp } }
+            }
+          )
           height
           width
         }
@@ -18,8 +30,20 @@ export const ArticleQuery = gql`
         image {
           credit
           image {
-            handle
             height
+            blur: url(
+              transformation: {
+                image: {
+                  resize: { width: 10, fit: scale }
+                }
+                document: { output: { format: webp } }
+              }
+            )
+            url(
+              transformation: {
+                document: { output: { format: webp } }
+              }
+            )
             width
           }
         }

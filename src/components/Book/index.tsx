@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import GraphImg from 'graphcms-image'
+import Image from 'next/image';
+
 import { Book as BookInterface } from '~typings'
 
 import Styles from './index.module.scss'
@@ -13,14 +14,15 @@ export const Book: FC<BookInterface> = ({
 }) => (
   <div className={Styles.book}>
     <a href={link} className={Styles.link}>
-      <GraphImg
-        backgroundColor={false}
-        className={Styles.image}
-        fit="scale"
-        image={image}
-        maxWidth={170}
-        withWebp={true}
-      />
+      <div className={Styles.image}>
+        <Image
+          blurDataURL={image.blur}
+          height={image.height}
+          placeholder="blur"
+          src={image.thumbnail}
+          width={image.width}
+        />
+      </div>
 
       <div>
         <h3>{title}</h3>
