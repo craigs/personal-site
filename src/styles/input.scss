@@ -2,7 +2,7 @@ input {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--color-white);
   padding: 0.5rem 1.25rem;
   border-radius: 20px;
 
@@ -13,10 +13,10 @@ input {
 }
 
 button {
-  background: white;
+  background: var(--color-green);
   border: 2px solid white;
   border-radius: 20px;
-  color: #18181e;
+  color: var(--color-white);
   display: inline-block;
   margin-top: 2rem;
   padding: 0.5rem 1.25rem;

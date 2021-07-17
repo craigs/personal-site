@@ -11,7 +11,7 @@ import Styles from './index.module.scss'
 const Links: FC<ReactNode> = () => {
   const { asPath } = useRouter()
 
-  const renderLink = (link: LinkInterface) => {
+  const render = (link: LinkInterface) => {
     const { href, as, name } = link
     const active = asPath.startsWith(as)
 
@@ -27,9 +27,7 @@ const Links: FC<ReactNode> = () => {
 
   return (
     <div className={Styles.links}>
-      {links.map(link => (
-        <div key={link.as}>{renderLink(link)}</div>
-      ))}
+      {links.map(link => <div key={link.as}>{render(link)}</div>)}
     </div>
   )
 }

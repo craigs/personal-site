@@ -4,4 +4,3 @@ declare module '*.scss' {
 }
 
 declare module 'graphcms-image'
-declare module 'react-markdown/with-html'

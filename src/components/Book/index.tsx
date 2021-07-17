@@ -24,8 +24,8 @@ export const Book: FC<BookInterface> = ({
 
       <div>
         <h3>{title}</h3>
-        {subtitle && <h4>{subtitle}</h4>}
         <p>{author}</p>
+        {subtitle && <h4>{subtitle}</h4>}
       </div>
     </a>
   </div>

@@ -1,15 +1,15 @@
 .links {
   & a {
-    position: relative;
-    color: #869cc6;
+    color: var(--color-grey50);
     font-size: 1.25rem;
     font-weight: 600;
+    margin-top: 0.5rem;
     padding: 0.5rem;
     padding-left: 4rem;
-    margin-top: 0.5rem;
-  }
-}
+    position: relative;
 
-.active {
-  color: #ffffff !important;
+    &.active {
+      color: var(--color-grey10);
+    }
+  }
 }

@@ -6,7 +6,7 @@
 
   @include mobile {
     display: inline-block;
-    color: white;
+    color: var(--color-white);
     z-index: 1;
     position: absolute;
     top: 2rem;

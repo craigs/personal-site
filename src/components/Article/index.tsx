@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import ReactMarkdown from 'react-markdown/with-html'
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import { Article as ArticleInterface } from '~typings'
 import { ContentImage } from './ContentImage'
 import { Cover } from './Cover'
@@ -28,9 +29,10 @@ export const Article: FC<Props> = ({ article }) => {
             {content && (
               <div className={Styles.content}>
                 <ReactMarkdown
+                  children={content}
                   key={`content-${id}`}
-                  escapeHtml={false}
-                  source={content}
+                  rehypePlugins={[rehypeRaw]}
+                  skipHtml={false}
                 />
               </div>
             )}

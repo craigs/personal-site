@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown/with-html'
+import ReactMarkdown from 'react-markdown'
 import TestRenderer from 'react-test-renderer'
 import article from '../../../fixtures/article'
 import { Article } from '../..'
