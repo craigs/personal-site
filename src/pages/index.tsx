@@ -33,7 +33,6 @@ const Page: NextPage<PageProps> = ({ articles, books, podcasts }) => (
       <title>craigs.io - welcome</title>
     </Head>
 
-    {'<!--jqgQgUne76hJLEYjOMktE -->'}
     <Articles collection={articles} />
 
     <div className={Styles.section}>
