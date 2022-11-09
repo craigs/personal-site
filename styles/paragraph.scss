@@ -1,0 +1,30 @@
+@import './mixins/breakpoints.scss';
+
+p,
+li,
+ul {
+  padding: 0 2rem;
+  color: var(--color-grey90);
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  max-width: 800px;
+
+  @include mobile {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+
+  &::-moz-selection {
+    background: var(--color-grey);
+    color: var(--color-white);
+  }
+
+  &::selection {
+    background: var(--color-grey);
+    color: var(--color-white);
+  }
+}
+
+strong {
+  font-weight: 600;
+}

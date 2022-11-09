@@ -1,0 +1,49 @@
+@import '../../styles/mixins/breakpoints.scss';
+
+.toggle {
+  display: none;
+  cursor: pointer;
+
+  @include mobile {
+    display: inline-block;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+}
+
+.toggler {
+  display: none;
+}
+
+.toggler:checked+.container {
+  @include mobile {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-areas: '. .';
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+  position: relative;
+  transition: 0.1s;
+
+  @include mobile {
+    position: relative;
+    transform: translate3D(-200px, 0, 0);
+    grid-template-columns: 200px 100vw;
+  }
+}
+
+.content {
+  padding: 2rem 3rem;
+
+  @include mobile {
+    padding: 2rem 2rem;
+  }
+}

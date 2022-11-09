@@ -1,20 +1,25 @@
-import React from 'react'
-import Company from './Company'
-import Links from './Links'
-import Social from './Social'
+import React, { FC } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import Styles from './index.css'
+import { Links } from './Links'
+import { Social } from './Social'
+import Styles from './index.module.scss'
 
-export default () => (
+export const Sidebar: FC = () => (
   <div className={Styles.sidebar}>
     <div className={Styles.home}>
-      <a href="/">
-        <img src="/logos/craigs.svg" />
-      </a>
+      <Link href='/' title='home'>
+        <Image
+          alt='home'
+          height={70}
+          src='/logos/craigs.svg'
+          width={70}
+        />
+      </Link>
     </div>
 
     <Links />
     <Social />
-    <Company />
   </div>
 )

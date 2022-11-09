@@ -1,0 +1,30 @@
+.container {
+  width: 170px;
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.title {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.author {
+  color: var(--color-grey70);
+  line-height: 1.5rem;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.teaser {
+  color: var(--color-grey90);
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  padding: 0;
+  margin-top: 0;
+}

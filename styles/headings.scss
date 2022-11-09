@@ -1,0 +1,54 @@
+@import './mixins/breakpoints.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0 2rem;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 0;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+h1,
+h2 {}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  max-width: 500px;
+  padding: 0;
+
+  @include mobile {
+    font-size: 2.2rem;
+    max-width: unset;
+  }
+
+  &+p {
+    margin-top: 0;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}

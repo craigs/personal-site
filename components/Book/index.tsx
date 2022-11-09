@@ -1,27 +1,39 @@
-import GraphImg from 'graphcms-image'
-import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FC } from 'react'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
-export const Book = ({ link, image, title, subtitle, author }) => (
-  <div className={Styles.book}>
-    <a href={link} className={Styles.link}>
-      {process.browser && (
-        <GraphImg
-          backgroundColor={false}
-          className={Styles.image}
-          fit="scale"
-          image={image}
-          maxWidth={170}
-          withWebp={true}
-        />
-      )}
+export type BookProps = {
+  author: string
+  createdAt: string
+  image: string
+  link: string
+  teaser: string
+  title: string
+}
 
-      <div>
-        <h3>{title}</h3>
-        {subtitle && <h4>{subtitle}</h4>}
-        <p>{author}</p>
-      </div>
-    </a>
+export const Book: FC<BookProps> = ({
+  author,
+  createdAt,
+  image,
+  link,
+  teaser,
+  title
+}) => (
+  <div key={title} className={Styles.container}>
+    <Link href={link}>
+      <Image
+        alt=''
+        className={Styles.image}
+        src={image}
+        width={170}
+        height={170}
+      />
+
+      <h3 className={Styles.title}>{title}</h3>
+      <p className={Styles.author}>{author}</p>
+      <p className={Styles.teaser}>{teaser}</p>
+    </Link>
   </div>
 )

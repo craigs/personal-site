@@ -1,20 +1,25 @@
-import App from 'next/app'
-import React from 'react'
+import type { AppProps } from 'next/app'
+import { FC, useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 
-class MainApp extends App {
-  public componentDidMount() {
+import { Layout } from '../components'
+
+import '../styles/index.scss'
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  useEffect(() => {
     if (!process.env.GTM_ID) return
 
     TagManager.initialize({
       gtmId: process.env.GTM_ID
     })
-  }
+  }, [])
 
-  public render() {
-    const { Component, pageProps } = this.props
-    return <Component {...pageProps} />
-  }
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
-export default MainApp
+export default App

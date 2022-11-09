@@ -1,24 +1,50 @@
-import React from 'react'
+import React, { FC } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import Styles from './index.css'
+import Styles from './index.module.scss'
 
-export default () => (
+export const Social: FC = () => (
   <div className={Styles.social}>
     <hr />
 
-    <a href="https://twitter.com/craigs_io">
-      <img src="/logos/twitter.svg" />
+    <Link
+      title='@craigs_io'
+      href='https://twitter.com/craigs_io'
+    >
+      <Image
+        alt='Twitter'
+        height={14}
+        src='/logos/twitter.svg'
+        width={16}
+      />
       Twitter
-    </a>
+    </Link>
 
-    <a href="https://www.linkedin.com/in/craigs0/">
-      <img src="/logos/linkedin.svg" />
+    <Link
+      title='craigs0'
+      href='https://www.linkedin.com/in/craigs0/'
+    >
+      <Image
+        alt='LinkedIn'
+        height={16}
+        src='/logos/linkedin.svg'
+        width={16}
+      />
       LinkedIn
-    </a>
+    </Link>
 
-    <a href="https://github.com/craigs/personal-site">
-      <img src="/logos/github.svg" />
+    <Link
+      title='github.com/craigs'
+      href='https://github.com/craigs'
+    >
+      <Image
+        alt='GitHub'
+        height={16}
+        src='/logos/github.svg'
+        width={16}
+      />
       GitHub
-    </a>
+    </Link>
   </div>
 )

@@ -1,49 +1,56 @@
 import Head from 'next/head'
-import React, { useState } from 'react'
-import { Swipeable } from 'react-swipeable'
-import Favicon from './Favicon'
-import Sidebar from './Sidebar'
+import Image from 'next/image'
+import React, { FC, ReactNode, useState } from 'react'
+import { useSwipeable } from 'react-swipeable'
 
-import '../../styles/index.css'
-import Styles from './index.css'
+import { Favicon } from './Favicon'
+import { Sidebar } from './Sidebar'
+import Styles from './index.module.scss'
 
-export const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode
+}
+
+export const Layout: FC<LayoutProps> = ({ children }) => {
   const [open, setOpen] = useState(false)
 
-  const config = {
+  const handlers = useSwipeable({
     onSwipedLeft: () => setOpen(false),
     onSwipedRight: () => setOpen(true),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true
-  }
+  })
 
   return (
     <>
       <Head>
         <title>craigs.io | Welcome</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="robots" content="index, follow" />
-        <meta name="application-name" content="craigs.io" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta property="og:site_name" content="craigs.io" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name='robots' content='index, follow' />
+        <meta name='application-name' content='craigs.io' />
+        <meta name='format-detection' content='telephone=no' />
+        <meta property='og:site_name' content='craigs.io' />
         <Favicon />
       </Head>
 
-      <Swipeable {...config}>
+      <div {...handlers}>
         <div className={Styles.toggle}>
-          <label htmlFor="toggler">
-            <img src="/hamburger.svg" />
+          <label htmlFor='toggler'>
+            <Image
+              alt='menu'
+              height={15}
+              src='/hamburger.svg'
+              width={20}
+            />
           </label>
         </div>
 
         <input
-          id="toggler"
+          id='toggler'
           checked={open}
           className={Styles.toggler}
-          name="toggler"
+          name='toggler'
           onChange={() => setOpen(!open)}
-          type="checkbox"
+          type='checkbox'
         />
 
         <div className={Styles.container}>
@@ -51,7 +58,7 @@ export const Layout = ({ children }) => {
 
           <div className={Styles.content}>{children}</div>
         </div>
-      </Swipeable>
+      </div>
     </>
   )
 }

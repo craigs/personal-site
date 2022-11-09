@@ -1,40 +1,47 @@
-import classNames from 'classnames/bind'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
-import { Dot } from './Dot'
-import links from './links'
+import React, { FC } from 'react'
+import { Dot } from '../Dot'
 
-import Styles from './index.css'
-const css = classNames.bind(Styles)
+import Styles from './index.module.scss'
 
-export default () => {
-  const { asPath } = useRouter()
-
-  const renderLink = ({ href, as, name }) => {
-    const active = asPath.startsWith(as)
-
-    return (
-      <Link href={href} as={as}>
-        <a className={css({ active })}>
-          {active && <Dot />}
-          {name}
-        </a>
-      </Link>
-    )
+const links = [
+  {
+    href: '/articles',
+    name: 'Articles',
+    title: 'Articles'
+  },
+  {
+    href: '/books',
+    name: 'Books',
+    title: 'Recommended books'
+  },
+  {
+    href: '/work',
+    name: 'Work',
+    title: 'Current employment'
+  },
+  {
+    href: '/bio',
+    name: 'Bio',
+    title: 'Biography'
   }
+]
+
+export const Links: FC = () => {
+  const { asPath } = useRouter()
 
   return (
     <div className={Styles.links}>
-      {links.map(link => (
-        <div key={link.as}>
-          {renderLink({
-            as: link.as,
-            href: link.href,
-            name: link.name
-          })}
-        </div>
-      ))}
+      {links.map(({ href, name, title }) => {
+        const active = asPath.startsWith(href)
+        return (
+          <Link href={href} key={name} title={title}>
+            {active && <Dot />}
+            {name}
+          </Link>
+        )
+      })}
     </div>
   )
 }
